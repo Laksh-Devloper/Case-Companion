@@ -1,0 +1,339 @@
+<!-- templates/login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Case Companion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f7f7f7;
+            height: 100vh;
+            display: flex;
+            flex-direction: column; /* CHANGED: Allow header and container */
+            overflow: hidden;
+        }
+        /* CHANGED: Added header styles */
+        .header {
+            background-color: #FFD700;
+            padding: 15px 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            animation: slideIn 0.5s ease; /* CHANGED: Slide-in animation on load */
+        }
+        .home-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            background-color: #FFD700;
+            color: #333;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: transform 0.2s ease, background-color 0.3s ease;
+        }
+        .home-btn i { margin-right: 8px; }
+        .home-btn:hover {
+            background-color: #FFC107;
+            transform: scale(1.05); /* CHANGED: Scale animation on hover */
+        }
+        /* CHANGED: Animation keyframes */
+        @keyframes slideIn {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .login-container {
+            width: 100%;
+            flex: 1; /* CHANGED: Fill remaining space */
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .centered-forms {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+            max-width: 900px;
+            width: 90%;
+        }
+        @media (max-width: 768px) {
+            .centered-forms { flex-direction: column; gap: 20px; }
+        }
+        .form-box {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            animation: fadeIn 0.5s ease;
+        }
+        @media (max-width: 768px) {
+            .form-box { width: 100%; max-width: 400px; }
+        }
+        .form-box h2 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .form-box input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .form-box button {
+            width: 100%;
+            padding: 10px;
+            background-color: #FFD700;
+            color: #333;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        }
+        .form-box button:hover { background-color: #FFC107; }
+        .google-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 10px;
+            background-color: #4285F4;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+        .google-btn i { margin-right: 8px; }
+        .google-btn:hover { background-color: #357ae8; }
+        .forgot-password {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .forgot-password a {
+            color: #333;
+            text-decoration: none;
+            font-size: 12px;
+        }
+        .forgot-password a:hover { text-decoration: underline; }
+        .error-message { color: red; font-size: 12px; margin-top: 5px; text-align: center; }
+        .success-message { color: green; font-size: 12px; margin-top: 5px; text-align: center; }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 1000;
+        }
+        .modal-content {
+            background: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 350px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .modal-content h2 { color: #333; text-align: center; margin-bottom: 15px; }
+        .modal-content input { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; }
+        .modal-content button { width: 100%; padding: 10px; background-color: #FFD700; color: #333; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; margin-top: 10px; transition: background-color 0.3s ease; }
+        .modal-content button:hover { background-color: #FFC107; }
+        .close-btn { position: absolute; top: 10px; right: 10px; font-size: 20px; cursor: pointer; color: #333; }
+        @media (max-width: 480px) {
+            .form-box, .modal-content { padding: 15px; }
+            .form-box input, .modal-content input, .form-box button, .modal-content button, .google-btn { font-size: 12px; padding: 8px; }
+            .header { padding: 10px; } /* CHANGED: Adjust header for small screens */
+            .home-btn { font-size: 14px; padding: 8px 16px; }
+        }
+    </style>
+</head>
+<body>
+<!-- CHANGED: Added header with Back to Home button -->
+<div class="header">
+    <a href="{% url 'index' %}" class="home-btn"><i class="fas fa-home"></i> Back to Home</a>
+</div>
+<div class="login-container">
+    <div class="centered-forms">
+        <div class="form-box">
+            <h2>Sign Up</h2>
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="{% if message.tags == 'error' %}error-message{% else %}success-message{% endif %}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+            <form id="signup-form" action="{% url 'signup' %}" method="POST">
+                {% csrf_token %}
+                <input type="text" id="username" name="username" placeholder="Username" required value="{{ signup_form.username.value|default_if_none:'' }}">
+                {% if signup_form.username.errors %}
+                    <div class="error-message">{{ signup_form.username.errors }}</div>
+                {% endif %}
+                <input type="email" id="email" name="email" placeholder="Email" required value="{{ signup_form.email.value|default_if_none:'' }}">
+                {% if signup_form.email.errors %}
+                    <div class="error-message">{{ signup_form.email.errors }}</div>
+                {% endif %}
+                <input type="tel" id="phone_number" name="phone_number" placeholder="Phone Number" value="{{ signup_form.phone_number.value|default_if_none:'' }}">
+                {% if signup_form.phone_number.errors %}
+                    <div class="error-message">{{ signup_form.phone_number.errors }}</div>
+                {% endif %}
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                {% if signup_form.password.errors %}
+                    <div class="error-message">{{ signup_form.password.errors }}</div>
+                {% endif %}
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required>
+                {% if signup_form.confirm_password.errors %}
+                    <div class="error-message">{{ signup_form.confirm_password.errors }}</div>
+                {% endif %}
+                <button type="submit" id="signup-btn">Sign Up</button>
+            </form>
+            <div>
+                <a href="{% url 'google_login' %}" class="google-btn"><i class="fab fa-google"></i> Login With Google</a>
+                <a href="{% url 'phone_login' %}" class="google-btn"><i class="fas fa-phone"></i> Login With Phone</a>
+            </div>
+        </div>
+        <div class="form-box">
+            <h2>Login</h2>
+            <form id="login-form" action="{% url 'login' %}" method="POST">
+                {% csrf_token %}
+                <input type="email" id="login-email" name="email" placeholder="Email" required value="{{ login_form.email.value|default_if_none:'' }}">
+                {% if login_form.email.errors %}
+                    <div class="error-message">{{ login_form.email.errors }}</div>
+                {% endif %}
+                <input type="password" id="login-password" name="password" placeholder="Password" required>
+                {% if login_form.password.errors %}
+                    <div class="error-message">{{ login_form.password.errors }}</div>
+                {% endif %}
+                <button type="submit" id="login-btn">Login</button>
+            </form>
+            <div class="forgot-password">
+                <a id="forgot-password-link">Forgot Password?</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="reset-password-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">×</span>
+        <h2>Reset Password</h2>
+        <form id="reset-password-form" action="{% url 'password_reset' %}" method="POST">
+            {% csrf_token %}
+            <input type="email" id="reset-email" name="email" placeholder="Enter your email" required>
+            <div id="reset-email-error" class="error-message"></div>
+            <button type="submit">Send Reset Link</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.getElementById('signup-form').addEventListener('submit', function(event) {
+        const username = document.getElementById('username').value;
+        const email = document.getElementById('email').value;
+        const phoneNumber = document.getElementById('phone_number').value;
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirm_password').value;
+        let errorMessage = '';
+
+        if (username.length < 5) errorMessage += 'Username should be at least 5 characters long. ';
+        if (!email.includes('@gmail.com')) errorMessage += 'Email should be a Gmail address. ';
+        if (phoneNumber && !/^\+?\d{10,15}$/.test(phoneNumber)) errorMessage += 'Enter a valid phone number. ';
+        const hasUpperCase = /[A-Z]/.test(password);
+        const hasLowerCase = /[a-z]/.test(password);
+        const hasNumber = /[0-9]/.test(password);
+        const hasSpecialChar = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password);
+        if (password.length < 6) errorMessage += 'Password should be at least 6 characters long. ';
+        else if (!hasUpperCase) errorMessage += 'Password must contain at least one uppercase letter. ';
+        else if (!hasLowerCase) errorMessage += 'Password must contain at least one lowercase letter. ';
+        else if (!hasNumber) errorMessage += 'Password must contain at least one number. ';
+        else if (!hasSpecialChar) errorMessage += 'Password must contain at least one special character. ';
+        if (password !== confirmPassword) errorMessage += 'Passwords do not match. ';
+
+        if (errorMessage) {
+            alert(errorMessage);
+            event.preventDefault();
+        }
+    });
+
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+        const email = document.getElementById('login-email').value;
+        const password = document.getElementById('login-password').value;
+        let errorMessage = '';
+
+        if (!email.includes('@gmail.com')) errorMessage += 'Email should be a Gmail address. ';
+        const hasUpperCase = /[A-Z]/.test(password);
+        const hasLowerCase = /[a-z]/.test(password);
+        const hasNumber = /[0-9]/.test(password);
+        const hasSpecialChar = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password);
+        if (password.length < 6) errorMessage += 'Password should be at least 6 characters long. ';
+        else if (!hasNumber) errorMessage += 'Password must contain at least one number. ';
+
+        if (errorMessage) {
+            alert(errorMessage);
+            event.preventDefault();
+        }
+    });
+
+    const modal = document.getElementById('reset-password-modal');
+    const forgotLink = document.getElementById('forgot-password-link');
+    const closeBtn = document.querySelector('.close-btn');
+    const resetForm = document.getElementById('reset-password-form');
+    const resetEmailError = document.getElementById('reset-email-error');
+
+    forgotLink.addEventListener('click', () => modal.style.display = 'block');
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+        resetEmailError.textContent = '';
+        resetForm.reset();
+    });
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+            resetEmailError.textContent = '';
+            resetForm.reset();
+        }
+    });
+    resetForm.addEventListener('submit', (event) => {
+        const email = document.getElementById('reset-email').value;
+        if (!email.includes('@gmail.com')) {
+            resetEmailError.textContent = 'Please enter a valid Gmail address.';
+            event.preventDefault();
+        } else {
+            resetEmailError.textContent = '';
+        }
+    });
+</script>
+</body>
+</html>

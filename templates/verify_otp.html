@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify OTP</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            background: linear-gradient(145deg, #ffe066, #ffc300);
+            padding: 80px 60px;
+            border-radius: 30px;
+            width: 450px;
+            height: 450px; /* Bump height for message space */
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.2s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        h1 {
+            font-size: 2.6rem;
+            color: #3b3b3b;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.5rem;
+            color: #444;
+            margin-bottom: 20px;
+        }
+        .emoji {
+            font-size: 3rem;
+            margin: 10px 0;
+            animation: bounce 2s infinite;
+            color: black;
+        }
+        .otp-input {
+            width: 80%;
+            padding: 12px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 25px;
+            margin: 0 auto 20px;
+            display: block;
+            text-align: center;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .verify-btn {
+            background-color: #000;
+            color: #fff;
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .verify-btn:hover {
+            background-color: #333;
+        }
+        .footer-text {
+            font-size: 1.2rem;
+            color: #333;
+            font-weight: bold;
+            margin-top: 20px;
+            opacity: 0.85;
+            animation: fadeIn 3s;
+        }
+        .message-error {
+            font-size: 1.2rem;
+            color: #d00;
+            margin-top: 10px;
+        }
+        .message-success {
+            font-size: 1.2rem;
+            color: #0a0;
+            margin-top: 10px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Verify OTP <span class="emoji">🔐</span></h1>
+        <p>Enter the OTP sent to your phone</p>
+        <form method="POST" action="{% url 'verify_otp' %}">
+            {% csrf_token %}
+            <input type="text" class="otp-input" placeholder="123456" name="otp">
+            <button type="submit" class="verify-btn">Verify</button>
+        </form>
+        {% if messages %}
+            {% for message in messages %}
+                <div class="{% if message.tags == 'error' %}message-error{% else %}message-success{% endif %}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+        <p class="footer-text">Your data is safe and secure</p>
+    </div>
+
+    
+        {% if messages %}
+            {% for message in messages %}
+                {% if message.tags == 'error' %}
+                   <script> console.warn("{{ message }}");</script>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    
+</body>
+</html>

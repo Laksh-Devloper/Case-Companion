@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - Case Companion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+        }
+        body.dark-mode {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #2c2c2c;
+            color: #FFD700;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-right: 20px;
+        }
+        .navbar .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 200px;
+        }
+        .navbar a {
+            color: #FFD700;
+            text-decoration: none;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+        .navbar a:hover {
+            color: #fff;
+        }
+        .navbar a i {
+            margin-right: 8px;
+        }
+        .dark-mode-toggle {
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+        .dark-mode-toggle:hover {
+            color: #fff;
+        }
+        .chat-container {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+            min-height: calc(100vh - 70px);
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #2c2c2c;
+            color: #fff;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .sidebar .history {
+            flex-grow: 1;
+            overflow-y: auto;
+            margin-bottom: 15px;
+        }
+        .sidebar .history-item {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #444;
+            transition: background-color 0.3s ease;
+        }
+        .sidebar .history-item:hover {
+            background-color: #3c3c3c;
+        }
+        .sidebar .new-chat {
+            padding: 10px;
+            text-align: center;
+            background-color: #FFD700;
+            color: #2c2c2c;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .sidebar .new-chat:hover {
+            background-color: #e6b800;
+        }
+        .chat-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            background-color: #fff;
+            overflow-y: auto;
+            height: calc(100vh - 70px - 60px);
+        }
+        body.dark-mode .chat-content {
+            background-color: #2c2c2c;
+        }
+        .message {
+            max-width: 60%;
+            margin: 10px 0;
+            padding: 12px 15px;
+            border-radius: 10px;
+            position: relative;
+            animation: fadeIn 0.3s ease forwards;
+            display: flex;
+            align-items: flex-start;
+        }
+        .message.user {
+            background-color: #FFD700;
+            color: #2c2c2c;
+            align-self: flex-end;
+        }
+        .message.ai {
+            background-color: #4a4a4a;
+            color: #fff;
+            align-self: flex-start;
+        }
+        .message .message-text {
+            flex-grow: 1;
+        }
+        .message .speak-icon {
+            margin-left: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            color: #FFD700;
+            transition: color 0.3s ease;
+        }
+        .message.user .speak-icon {
+            margin-left: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            color: #000000;
+            transition: color 0.3s ease;
+        }
+        .message.user .speak-icon:hover {
+            color: #eeeada;
+        }
+        .message .speak-icon:hover {
+            color: #e6b800;
+        }
+        .message .timestamp {
+            font-size: 0.7rem;
+            position: absolute;
+            bottom: -15px;
+            color: #888;
+            font-family: 'Roboto', sans-serif;
+        }
+        .message.user .timestamp {
+            right: 0;
+        }
+        .message.ai .timestamp {
+            left: 0;
+        }
+        body.dark-mode .message .timestamp {
+            color: #bbb;
+        }
+        .input-container {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+            width: 100%;
+            position: relative;
+        }
+        body.dark-mode .input-container {
+            background-color: #2c2c2c;
+            border-top: 1px solid #444;
+        }
+        .input-container input {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        .input-container input:focus {
+            border-color: #FFD700;
+            outline: none;
+        }
+        .input-container button {
+            background-color: #FFD700;
+            color: #2c2c2c;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-right: 10px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .input-container button:hover {
+            background-color: #e6b800;
+            transform: translateY(-2px);
+        }
+        .input-container .stop-button {
+            background-color: #ff4444;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .input-container .stop-button:hover {
+            background-color: #cc0000;
+            transform: translateY(-2px);
+        }
+        .input-container .mic-button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .input-container .mic-button:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
+        .typing-indicator {
+            display: none;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .typing-indicator span {
+            width: 6px;
+            height: 6px;
+            background-color: #4a4a4a;
+            border-radius: 50%;
+            margin: 0 2px;
+            animation: typing 1.2s infinite ease-in-out;
+        }
+        .typing-indicator span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .typing-indicator span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        @keyframes typing {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Case Companion</div>
+        <div class="nav-links">
+            <a href="{% url 'index' %}" class="home-link"><i class="fas fa-home"></i>Home</a>
+            <div class="dark-mode-toggle" id="dark-mode-toggle"><i class="fas fa-moon"></i></div>
+            <div class="user-info">
+                {% if user.is_authenticated %}
+                    Welcome, {{ user.username }}
+                {% else %}
+                    Not logged in
+                {% endif %}
+            </div>
+            <a href="{% url 'logout' %}" class="home-link">
+                <i class="fas fa-sign-out-alt"></i>
+                {% if user.is_authenticated %}Logout ({{ user.username }}){% else %}Logout{% endif %}
+            </a>
+        </div>
+    </nav>
+    <div class="chat-container">
+        <div class="sidebar">
+            <div class="history">
+                {% for chat in chat_history %}
+                    <div class="history-item">{{ chat.message|truncatechars:20 }}</div>
+                {% empty %}
+                    <div class="history-item">No chats yet</div>
+                {% endfor %}
+            </div>
+            <div class="new-chat" id="new-chat"><i class="fas fa-plus"></i> New Chat</div>
+        </div>
+        <div class="chat-content">
+            {% for chat in chat_history %}
+                <div class="message user">
+                    <div class="message-text">{{ chat.message }}</div>
+                    <i class="fas fa-volume-up speak-icon"></i>
+                    <div class="timestamp">{{ chat.timestamp|date:"H:i A" }}</div>
+                </div>
+                {% if chat.bot_response %}
+                    <div class="message ai">
+                        <div class="message-text">{{ chat.bot_response|safe }}</div>
+                        <i class="fas fa-volume-up speak-icon"></i>
+                        <div class="timestamp">{{ chat.timestamp|date:"H:i A" }}</div>
+                    </div>
+                {% endif %}
+            {% empty %}
+                <p style="text-align: center; color: #666;">No messages yet. Start chatting!</p>
+            {% endfor %}
+            <div class="typing-indicator" id="typing-indicator">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
+    <div class="input-container">
+        <form method="POST" style="display: flex; width: 100%;">
+            {% csrf_token %}
+            <input type="text" placeholder="Type your message..." id="message-input" name="message">
+            <button type="submit" id="send-button"><i class="fas fa-paper-plane"></i></button>
+            <button type="button" class="stop-button" id="stop-button"><i class="fas fa-stop"></i></button>
+            <button type="button" class="mic-button" id="mic-button"><i class="fas fa-microphone"></i></button>
+        </form>
+    </div>
+
+    <script>
+        const toggle = document.getElementById('dark-mode-toggle');
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+
+        const newChat = document.getElementById('new-chat');
+        newChat.addEventListener('click', () => {
+            if (confirm('Are you sure you want to start a new chat? This will clear the current conversation.')) {
+                document.querySelector('.chat-content').innerHTML = '<p style="text-align: center; color: #666;">No messages yet. Start chatting!</p>';
+            }
+        });
+
+        const chatContent = document.querySelector('.chat-content');
+        chatContent.scrollTop = chatContent.scrollHeight;
+
+        let isSpeaking = false;
+
+        // Speak aloud functionality
+        document.querySelectorAll('.speak-icon').forEach(icon => {
+            icon.addEventListener('click', () => {
+                if (isSpeaking) {
+                    speechSynthesis.cancel();
+                }
+                const messageText = icon.closest('.message').querySelector('.message-text').textContent;
+                if ('speechSynthesis' in window) {
+                    const utterance = new SpeechSynthesisUtterance(messageText);
+                    utterance.lang = 'en-US';
+                    utterance.volume = 1;
+                    utterance.rate = 1;
+                    utterance.pitch = 1;
+                    utterance.onstart = () => {
+                        isSpeaking = true;
+                    };
+                    utterance.onend = () => {
+                        isSpeaking = false;
+                    };
+                    speechSynthesis.speak(utterance);
+                } else {
+                    alert('Text-to-speech is not supported in your browser.');
+                }
+            });
+        });
+
+        // Stop button functionality
+        const stopButton = document.getElementById('stop-button');
+        stopButton.addEventListener('click', () => {
+            if (isSpeaking) {
+                speechSynthesis.cancel();
+                isSpeaking = false;
+            }
+        });
+
+        // Speech-to-text functionality
+        const messageInput = document.getElementById('message-input');
+        const micButton = document.getElementById('mic-button');
+        let recognition;
+
+        if ('webkitSpeechRecognition' in window) {
+            recognition = new webkitSpeechRecognition();
+            recognition.continuous = false;
+            recognition.interimResults = false;
+            recognition.lang = 'en-US';
+
+            recognition.onresult = (event) => {
+                const transcript = event.results[0][0].transcript;
+                messageInput.value = transcript;
+            };
+
+            recognition.onerror = (event) => {
+                console.error('Speech recognition error:', event.error);
+                alert('Error during speech recognition. Please try again.');
+            };
+
+            recognition.onend = () => {
+                micButton.classList.remove('active');
+            };
+
+            micButton.addEventListener('click', () => {
+                if (!recognition) return;
+
+                if (!micButton.classList.contains('active')) {
+                    recognition.start();
+                    micButton.classList.add('active');
+                    messageInput.value = ''; // Clear input before recording
+                } else {
+                    recognition.stop();
+                    micButton.classList.remove('active');
+                }
+            });
+        } else {
+            micButton.disabled = true;
+            alert('Speech-to-text is not supported in your browser. Please use a supported browser like Chrome.');
+        }
+    </script>
+</body>
+</html>

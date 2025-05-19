@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Companion - Your Trusted Legal Guide</title>
+    {% load static %}
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Playfair Display', serif;
+            background: #f5f5f5;
+            color: #333;
+            overflow-x: hidden;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        body.dark-mode { background: #121212; color: #e0e0e0; }
+
+        html { scroll-behavior: smooth; }
+
+        .navbar {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 18px 3% 18px 1%;
+            background: #000;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo { margin-right: auto; }
+
+        .navbar .logo p {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #FFF;
+        }
+
+        .navbar .nav-links { display: flex; gap: 60px; }
+
+        .navbar a {
+            color: #FFF;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            transition: color 0.3s ease, transform 0.2s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar a i { margin-right: 8px; }
+
+        .navbar a:hover { color: #FFD700; transform: scale(1.1); }
+
+        .dark-mode-toggle {
+            margin-left: auto;
+            cursor: pointer;
+            color: #FFD700;
+            font-size: 22px;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .dark-mode-toggle i { margin-left: 8px; }
+
+        .dark-mode-toggle:hover { color: #fff; }
+
+        .navbar .hamburger { display: none; flex-direction: column; cursor: pointer; }
+
+        .navbar .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #FFF;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    .navbar .nav-links.active {
+        display: flex;
+    }
+    .navbar .hamburger {
+        display: flex;
+    }
+    .navbar .nav-links a {
+        font-size: 10px;  /* Reduced from 22px */
+    }
+}
+        .main-content {
+            text-align: center;
+            padding: 2rem 2rem 6rem; /* Reduced top padding from 8rem to 6rem */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            width: 100%;
+        }
+
+        .heading {
+            font-size: 3.9rem;
+            font-weight: 600;
+            color: #222;
+            opacity: 0;
+            margin-bottom: 4px;
+            text-align: left;
+            margin-left: -39%; /* Adjusted to align with tagline and description */
+        }
+
+        .heading.dark-mode { color: #e0e0e0; }
+
+        .tagline {
+            font-size: 1.9rem;
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 8px;
+            opacity: 0;
+            text-align: left;
+            margin-left: -30%; /* Aligned with heading */
+        }
+
+        .tagline.dark-mode { color: #b0b0b0; }
+
+        .description {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            max-width: 644px;
+            margin: 1rem auto 2rem;
+            line-height: 1.6;
+            color: #333;
+            text-align: left;
+            margin-left: -46%; /* Aligned with heading */
+            opacity: 1;
+        }
+
+        .description.dark-mode { color: #e0e0e0; }
+
+        .cta-button {
+            margin-top: 2.9rem;
+            opacity: 1;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .cta {
+            display: inline-block;
+            padding: 1rem 1.0rem;
+            background: linear-gradient(90deg, #FFD700, #FFC107, #FFD700);
+            background-size: 200% 200%;
+            color: #000;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 600;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: holographic 3s ease infinite, highlight 1.5s infinite;
+        }
+
+        .cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        @keyframes holographic {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes highlight {
+            0% { box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); }
+            50% { box-shadow: 0 0 20px rgba(255, 215, 0, 1); }
+            100% { box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); }
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #000;
+            color: #FFD700;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 5px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #FFD700;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease, transform 0.2s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-links a i { margin-right: 5px; }
+
+        .footer-links a:hover { color: #fff; transform: scale(1.1); }
+
+        @media (max-width: 768px) {
+            .footer-links { flex-direction: column; gap: 5px; }
+            .footer-links a { font-size: 0.9rem; }
+        }
+
+        .about-heading {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #222;
+            margin-bottom: 2rem;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.6s ease-out;
+        }
+
+        .about-heading.dark-mode { color: #e0e0e0; }
+
+        .about-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: stretch;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            opacity: 1;
+        }
+
+        .rectangle {
+            flex: 1;
+            min-width: 250px;
+            max-width: 30%;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            background: #FFD700; /* Default background */
+            color: #000;
+        }
+
+        .rectangle#vision { background: #FFD700; }
+        .rectangle#mission { background: #FFC107; }
+        .rectangle#pledge { background: #FFEB3B; }
+
+        .rectangle.dark-mode { color: #e0e0e0; }
+
+        .rectangle h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .rectangle p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .visible { opacity: 1; transform: translateY(0); }
+
+        .faq-heading {
+            font-size: 2.5rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .faq-subheading {
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        .accordion {
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .accordion-item {
+            background: #fff;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .accordion-item.dark-mode { background: #333; color: #e0e0e0; }
+
+        .accordion-item-header {
+            padding: 1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.2rem;
+            font-weight: 500;
+            background: #FFD700;
+            color: #000;
+            border: none;
+            outline: none;
+            text-align: left;
+            width: 100%;
+            transition: background 0.3s ease;
+        }
+
+        .accordion-item-header:hover { background: #FFC107; }
+
+        .accordion-item-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+
+        .accordion-item-body-content {
+            padding: 1rem;
+            border-top: 1px solid #ddd;
+        }
+
+        .accordion-item-body-content.dark-mode { border-top: 1px solid #555; }
+
+        .accordion-item-body-content p { margin-bottom: 12px; }
+
+        .accordion-item.active .accordion-item-body { max-height: 500px; overflow: visible; }
+
+        .accordion-item.active .accordion-item-header::after { content: "-"; }
+
+        .accordion-item-header::after {
+            content: "+";
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .accordion-item {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease-out;
+        }
+
+        .accordion-item.visible { opacity: 1; transform: translateY(0); }
+
+        .accordion-item:nth-child(1) { transition-delay: 0.1s; }
+        .accordion-item:nth-child(2) { transition-delay: 0.2s; }
+        .accordion-item:nth-child(3) { transition-delay: 0.3s; }
+        .accordion-item:nth-child(4) { transition-delay: 0.4s; }
+
+        .categories-heading {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: black; /* Changed to golden for better visibility */
+            text-align: center;
+            margin-bottom: 2rem;
+            opacity: 1;
+            transition: opacity 0.6s ease-out;
+        }
+
+        .categories-heading.dark-mode {
+            color: #FFC107; /* Adjusted for dark mode */
+        }
+
+        .categories-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 20px;
+            justify-items: center;
+            padding: 2rem;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 1200px) { .categories-container { grid-template-columns: repeat(4, 1fr); } }
+        @media (max-width: 992px) { .categories-container { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 768px) { .categories-container { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 576px) { .categories-container { grid-template-columns: 1fr; } }
+
+        .category-box {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 200px;
+            height: 150px;
+            color: #000;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .category-box.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .category-box:hover {
+            transform: translateY(-5px);
+            background: #FFD700;
+            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.7);
+        }
+
+        .category-box i { font-size: 2rem; margin-bottom: 0.5rem; }
+
+        .category-box-title { font-size: 1.2rem; font-weight: 500; }
+
+        .dark-mode .category-box { background: #000; color: #fff; }
+
+        .dark-mode .category-box:hover { background: #FFD700; color: #000; }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1001;
+            max-width: 500px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .popup.dark-mode { background: #333; color: #e0e0e0; }
+
+        .popup-content { margin-bottom: 1rem; }
+
+        .popup-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        .message-error { color: red; text-align: center; margin: 10px 0; }
+        .message-success { color: green; text-align: center; margin: 10px 0; }
+
+        /* Bubble Animation for Dark Mode */
+        .bubbles {
+            position: fixed; /* Cover the entire page */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1; /* Place behind content */
+            display: none; /* Hidden by default */
+        }
+
+        body.dark-mode .bubbles {
+            display: block; /* Show bubbles in dark mode */
+        }
+
+        .bubble {
+            position: absolute;
+            bottom: -100px;
+            width: 30px;
+            height: 30px;
+            background: #FFD700; /* Updated color */
+            border-radius: 50%;
+            animation: rise 12s infinite ease-in-out;
+        }
+
+        @keyframes rise {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-120vh) scale(0.8);
+                opacity: 0;
+            }
+        }
+
+        .bubble:nth-child(1) {
+            left: 10%;
+            width: 50px;
+            height: 50px;
+            animation-duration: 14s;
+            animation-delay: 0s;
+        }
+
+        .bubble:nth-child(2) {
+            left: 25%;
+            width: 30px;
+            height: 30px;
+            animation-duration: 12s;
+            animation-delay: 2s;
+        }
+
+        .bubble:nth-child(3) {
+            left: 40%;
+            width: 70px;
+            height: 70px;
+            animation-duration: 16s;
+            animation-delay: 4s;
+        }
+
+        .bubble:nth-child(4) {
+            left: 55%;
+            width: 40px;
+            height: 40px;
+            animation-duration: 10s;
+            animation-delay: 6s;
+        }
+
+        .bubble:nth-child(5) {
+            left: 70%;
+            width: 35px;
+            height: 35px;
+            animation-duration: 13s;
+            animation-delay: 3s;
+        }
+
+        .bubble:nth-child(6) {
+            left: 85%;
+            width: 60px;
+            height: 60px;
+            animation-duration: 15s;
+            animation-delay: 5s;
+        }
+
+        /* Floating Square Animation for Light Mode */
+        .squares {
+            position: fixed; /* Cover the entire page */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1; /* Place behind content */
+            display: none; /* Hidden by default */
+        }
+
+        body:not(.dark-mode) .squares {
+            display: block; /* Show squares in light mode */
+        }
+
+        .square {
+            position: absolute;
+            top: -100px;
+            width: 40px;
+            height: 40px;
+            background: #FFD700; /* Updated color */
+            animation: float 10s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(120vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .square:nth-child(1) {
+            left: 15%;
+            width: 60px;
+            height: 60px;
+            animation-duration: 12s;
+            animation-delay: 1s;
+        }
+
+        .square:nth-child(2) {
+            left: 30%;
+            width: 50px;
+            height: 50px;
+            animation-duration: 14s;
+            animation-delay: 3s;
+        }
+
+        .square:nth-child(3) {
+            left: 50%;
+            width: 80px;
+            height: 80px;
+            animation-duration: 16s;
+            animation-delay: 2s;
+        }
+
+        .square:nth-child(4) {
+            left: 70%;
+            width: 45px;
+            height: 45px;
+            animation-duration: 11s;
+            animation-delay: 4s;
+        }
+
+        .square:nth-child(5) {
+            left: 85%;
+            width: 65px;
+            height: 65px;
+            animation-duration: 13s;
+            animation-delay: 5s;
+        }
+
+        .chatbot-container {
+            position: absolute;
+            top: 22%;
+            right: 14%;
+            width: 350px; /* Increased width */
+            height: 415px; /* Increased height */
+            background: linear-gradient(135deg, #FFD700, #FFC107); /* Gradient background */
+            border-radius: 20px; /* More rounded corners */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            font-family: "Arial", sans-serif;
+            animation: slideIn 0.8s ease-out;
+            border: 3px solid #FFF; /* White border for highlight */
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .chatbot-header {
+            background: #333; /* Darker header for contrast */
+            color: #FFD700; /* Golden text */
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.5rem; /* Larger font size */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border-bottom: 2px solid #FFD700; /* Golden border */
+        }
+
+        .chatbot-header i {
+            font-size: 2rem; /* Larger icon */
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            background: #FFF; /* White background for messages */
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* Add spacing between messages */
+        }
+
+        .chatbot-message.user {
+            background: #FFD700;
+            color: #000;
+            align-self: flex-end; /* Align user messages to the right */
+            text-align: right;
+            padding: 10px 15px;
+            border-radius: 15px 15px 0 15px; /* Rounded corners */
+            max-width: 70%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .chatbot-message.bot {
+            background: #333;
+            color: #FFF;
+            align-self: flex-start; /* Align bot messages to the left */
+            text-align: left;
+            padding: 10px 15px;
+            border-radius: 15px 15px 15px 0; /* Rounded corners */
+            max-width: 70%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .chatbot-footer {
+            background: #333; /* Dark footer */
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top: 2px solid #FFD700; /* Golden border */
+        }
+
+        .start-chat-button {
+            background: linear-gradient(90deg, #FFD700, #FFC107);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #000;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Button shadow */
+        }
+
+        .start-chat-button i {
+            font-size: 1.5rem;
+            color: #000;
+        }
+
+        .start-chat-button:hover {
+            background: linear-gradient(90deg, #FFC107, #FFD700);
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Bubble Animation Background for Dark Mode -->
+    <div class="bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <!-- Floating Square Animation Background for Light Mode -->
+    <div class="squares">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <p>Case Companion</p>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-links" id="nav-links">
+            <a href="#home"><i class="fas fa-home"></i> Home</a>
+            <a href="#about"><i class="fas fa-info-circle"></i> About Us</a>
+            <a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a>
+            {% if user.is_authenticated %}
+                <a href="{% url 'chat_room' %}"><i class="fas fa-comment-alt"></i> Chat</a>
+                <a href="{% url 'profile' %}"><i class="fas fa-user"></i> Profile</a>  <!-- Right here! -->
+                <a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> Logout ({{ user.username }})</a>
+            {% else %}
+                <a href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> Login</a>
+                <a href="{% url 'signup' %}"><i class="fas fa-user-plus"></i> Signup</a>
+            {% endif %}
+            <a href="{% url 'contact' %}"><i class="fas fa-envelope"></i> Contact Us</a>
+        </div>
+        <div class="dark-mode-toggle" id="dark-mode-toggle">
+            <i class="fas fa-moon"></i>
+        </div>
+    </nav>
+
+    <!-- Messages -->
+    {% if messages %}
+        {% for message in messages %}
+            <div class="{% if message.tags == 'error' %}message-error{% else %}message-success{% endif %}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <!-- Main Content -->
+    <main class="main-content" id="home">
+        <div class="content-wrapper">
+            <div>
+                <h1 class="heading">Case Companion</h1>
+                <p class="tagline">Your Case, Our Commitment</p>
+                <p class="description" id="description">
+                    Your AI-powered legal companion provides instant support, simplifying complex laws and ensuring you understand your rights effortlessly. Get immediate assistance in navigating legal matters with confidence and convenience.
+                </p>
+            </div>
+            <!-- Chatbot Container -->
+            <div class="chatbot-container">
+                <div class="chatbot-header">
+                    <i class="fas fa-robot"></i> Case Companion
+                </div>
+                <div class="chatbot-messages" id="chatbot-messages">
+                    <!-- Messages will appear here -->
+                </div>
+                <div class="chatbot-footer">
+                    <button class="start-chat-button" onclick="window.location.href='{% url 'chat_room' %}'">
+                        <i class="fas fa-comments"></i> Start Chat
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- About Us Section -->
+    <section id="about" class="main-content">
+        <h2 class="about-heading">Our Vision, Mission & Values</h2>
+        <div class="about-container">
+            <div class="rectangle" id="vision">
+                <h3>Vision</h3>
+                <p>Ensuring legal knowledge is accessible to all, empowering individuals to understand and exercise their rights.</p>
+            </div>
+            <div class="rectangle" id="mission">
+                <h3>Mission</h3>
+                <p>To develop an AI-driven platform that simplifies legal information, provides multilingual support, and guides users in accessing justice.</p>
+            </div>
+            <div class="rectangle" id="pledge">
+                <h3>Pledge</h3>
+                <p>We commit to making legal awareness universal, breaking barriers to justice through technology and accessibility.</p>
+            </div>
+        </div>
+    </section>
+
+  <!-- Categories Section -->
+  <section id="categories" class="main-content">
+    <h2 class="categories-heading">Explore Legal Categories</h2>
+    <div class="categories-container">
+        <div class="category-box" data-content="{% verbatim %}<h3>Fundamental Rights</h3><ul><li>Guaranteed by the Indian Constitution to ensure freedom, equality, and justice (Article 12-35).</li><li>Includes the right to equality, freedom of speech, and protection from discrimination (Article 14-19).</li><li>Provides the right to education, religious freedom, and protection from exploitation (Article 21A, 25-28, 23-24).</li><li>Ensures access to legal remedies through constitutional provisions (Article 32, 226).</li><li>The judiciary safeguards these rights through legal intervention (Article 141, 142).</li><li>Violations can be challenged via public interest litigation (Article 39A).</li><li>Includes safeguards against arbitrary state actions (Article 21).</li><li>Strengthens democratic values and individual dignity.</li><li>Promotes awareness to empower citizens.</li></ul>{% endverbatim %}">
+            <i class="fas fa-gavel"></i>
+            <div class="category-box-title">Fundamental Rights</div>
+        </div>
+        <div class="category-box" data-content='
+            <h3>Women’s Rights</h3>
+            <ul>
+                <li>Legal protections include the Domestic Violence Act (2005) and Maternity Benefit Act (1961).</li>
+                <li>Safeguards against workplace harassment under the POSH Act (Prevention of Sexual Harassment, 2013).</li>
+                <li>Equal pay and non-discrimination laws in employment (Equal Remuneration Act, 1976).</li>
+                <li>Legal recourse for domestic violence and dowry harassment (Section 498A, IPC).</li>
+                <li>Property and inheritance rights ensure financial independence (Hindu Succession Act, 1956).</li>
+                <li>Laws ensure protection against sexual crimes and stalking (Section 354, IPC).</li>
+                <li>Special provisions exist for maternity leave and workplace safety (Article 42, Maternity Benefit Act).</li>
+                <li>Women’s helplines and legal aid services offer support (Article 39A).</li>
+            </ul>
+        '>
+            <i class="fas fa-female"></i>
+            <div class="category-box-title">Women’s Rights</div>
+        </div>
+        <div class="category-box" data-content="
+            <h3>Children’s Rights</h3>
+            <ul>
+                <li>Right to Education Act ensures free education up to 14 years (Article 21A, RTE Act, 2009).</li>
+                <li>Child Labour (Prohibition and Regulation) Act prevents exploitation (Article 24, CLPRA 1986).</li>
+                <li>Juvenile Justice Act provides legal protection for minors (JJ Act, 2015).</li>
+                <li>POCSO Act safeguards children from sexual offenses (Protection of Children from Sexual Offences Act, 2012).</li>
+                <li>Adoption laws ensure secure legal procedures (Hindu Adoption and Maintenance Act, 1956).</li>
+                <li>Child welfare committees work for protection and rehabilitation (JJ Act, Section 27).</li>
+                <li>Government schemes support healthcare, nutrition, and education (Article 45).</li>
+            </ul>
+        ">
+            <i class="fas fa-child"></i>
+            <div class="category-box-title">Children’s Rights</div>
+        </div>
+        <div class="category-box" data-content="
+            <h3>Senior Citizens’ Rights</h3>
+            <ul>
+                <li>The Maintenance and Welfare of Parents and Senior Citizens Act mandates financial support (2007).</li>
+                <li>Government schemes provide pensions and healthcare benefits (Article 41, Indira Gandhi Pension Scheme).</li>
+                <li>Protections against elder abuse and financial fraud (Section 125, CrPC).</li>
+                <li>Discounts on travel, healthcare, and public services (Senior Citizen Savings Scheme).</li>
+                <li>Legal provisions for retirement benefits, including provident funds (EPF Act, 1952).</li>
+                <li>Housing schemes and old-age homes for safe living (National Policy on Older Persons, 1999).</li>
+                <li>Free legal aid services for elderly citizens (Article 39A).</li>
+            </ul>
+        ">
+            <i class="fas fa-blind"></i>
+            <div class="category-box-title">Senior Citizens’ Rights</div>
+        </div>
+        <div class="category-box" data-content="
+            <h3>Labor Laws</h3>
+            <ul>
+                <li>Minimum Wages Act ensures fair compensation (1948).</li>
+                <li>Employees’ Provident Fund Act secures retirement benefits (1952).</li>
+                <li>Industrial Disputes Act provides mechanisms for workplace conflict resolution (1947).</li>
+                <li>Equal opportunity and anti-discrimination protections (Article 16).</li>
+                <li>Factories Act enforces workplace safety standards (1948).</li>
+                <li>Maternity Benefit Act grants paid maternity leave (1961).</li>
+                <li>Legal recourse against unfair dismissals and exploitation (Article 23, Bonded Labour System Abolition Act).</li>
+            </ul>
+        ">
+            <i class="fas fa-briefcase"></i>
+            <div class="category-box-title">Labor Laws</div>
+        </div>
+        <div class="category-box" data-content="
+            <h3>Consumer Rights</h3>
+            <ul>
+                <li>Consumer Protection Act ensures fair trade practices (2019).</li>
+                <li>Right to information, choice, and redressal for grievances (RTI Act, 2005).</li>
+                <li>Protection against false advertising and unfair billing (Section 2, CPA 2019).</li>
+                <li>Consumer courts address disputes related to defective products (CPA, District & State Commissions).</li>
+                <li>E-commerce laws govern online transactions (IT Act, 2000).</li>
+                <li>Right to safety from hazardous goods and services (CPA, Section 6).</li>
+                <li>Awareness campaigns promote consumer empowerment (Article 19(1)(a)).</li>
+            </ul>
+        ">
+            <i class="fas fa-shopping-cart"></i>
+            <div class="category-box-title">Consumer Rights</div>
+        </div>
+        <div class="category-box" data-content="
+            <h3>Cyber Laws</h3>
+            <ul>
+                <li>IT Act governs cybercrimes like hacking, fraud, and identity theft (Information Technology Act, 2000).</li>
+                <li>Data protection laws safeguard personal privacy (Personal Data Protection Bill).</li>
+                <li>Legal actions against cyberbullying and harassment (Section 67, IT Act).</li>
+                <li>Online fraud prevention and secure transactions (Section 66C, IT Act).</li>
+                <li>Laws against digital piracy and intellectual property theft (Copyright Act, 1957).</li>
+                <li>Organizations must ensure compliance with cybersecurity regulations (CERT-In Guidelines).</li>
+                <li>Reporting mechanisms help victims seek justice (Cyber Crime Reporting Portal).</li>
+            </ul>
+        ">
+            <i class="fas fa-shield-alt"></i>
+            <div class="category-box-title">Cyber Laws</div>
+        </div>
+        <div class="category-box" data-content="
+            <h3>Property & Housing Laws</h3>
+            <ul>
+                <li>Transfer of Property Act governs buying, selling, and inheritance (1882).</li>
+                <li>Rent Control Act protects tenants from unfair eviction (State-Specific Rent Acts).</li>
+                <li>RERA ensures transparency in real estate transactions (Real Estate (Regulation and Development) Act, 2016).</li>
+                <li>Co-operative Housing Societies Act regulates residential societies (State-Specific).</li>
+                <li>Legal protections against illegal land grabbing and encroachment (Land Acquisition Act, 2013).</li>
+                <li>Stamp duty and registration laws confirm legal ownership (Registration Act, 1908).</li>
+                <li>Laws exist for mortgages, leases, and property disputes (SARFAESI Act, 2002).</li>
+            </ul>
+        ">
+            <i class="fas fa-home"></i>
+            <div class="category-box-title">Property & Housing Laws</div>
+        </div>
+        <div class="category-box" data-content="
+            <h3>Criminal Laws</h3>
+            <ul>
+                <li>Indian Penal Code (IPC) defines crimes and penalties (1860).</li>
+                <li>Code of Criminal Procedure (CrPC) outlines legal processes (1973).</li>
+                <li>Bail laws provide guidelines for temporary release (Section 436-439, CrPC).</li>
+                <li>Self-defense laws protect individuals from harm (Section 96-106, IPC).</li>
+                <li>White-collar crimes, like fraud and corruption, are regulated (Prevention of Corruption Act, 1988).</li>
+                <li>FIRs must be filed to initiate legal proceedings (Section 154, CrPC).</li>
+                <li>Judiciary ensures due process and fair trials (Article 21, 22).</li>
+            </ul>
+        ">
+            <i class="fas fa-balance-scale"></i>
+            <div class="category-box-title">Criminal Laws</div>
+        </div>
+        <div class="category-box" data-content="
+            <h3>Family Laws</h3>
+            <ul>
+                <li>Hindu Marriage Act and Special Marriage Act regulate marriages (1955, 1954).</li>
+                <li>Divorce laws outline legal separation procedures (Hindu Marriage Act, Section 13).</li>
+                <li>Maintenance laws ensure financial support for spouses and children (Section 125, CrPC).</li>
+                <li>Adoption Act governs legal adoption processes (HAMA, 1956).</li>
+                <li>Inheritance laws dictate property distribution among heirs (Hindu Succession Act, 1956).</li>
+                <li>Domestic violence laws protect individuals from abuse (DV Act, 2005).</li>
+                <li>Legal aid services assist in family disputes (Article 39A).</li>
+            </ul>
+        ">
+            <i class="fas fa-users"></i>
+            <div class="category-box-title">Family Laws</div>
+        </div>
+        <div class="category-box" data-content="
+            <h3>LGBTQ+ Rights</h3>
+            <ul>
+                <li>Decriminalization of Section 377 recognizes same-sex relationships (Navtej Singh Johar v. Union of India, 2018).</li>
+                <li>Anti-discrimination laws ensure workplace equality (Transgender Persons (Protection of Rights) Act, 2019).</li>
+                <li>Legal provisions exist for gender identity recognition (NALSA v. Union of India, 2014).</li>
+                <li>Transgender persons have rights to self-identification (Section 4, TPPR Act).</li>
+                <li>Marriage and adoption rights remain legal challenges.</li>
+                <li>Awareness campaigns promote inclusivity and equality (Article 14, 15).</li>
+            </ul>
+        ">
+            <i class="fas fa-rainbow"></i>
+            <div class="category-box-title">LGBTQ+ Rights</div>
+        </div>
+        <div class="category-box" data-content="
+            <h3>Disability Rights</h3>
+            <ul>
+                <li>Rights of Persons with Disabilities Act mandates equal opportunities (2016).</li>
+                <li>Public spaces and transport must be accessible (RPWD Act, Section 44).</li>
+                <li>Anti-discrimination laws protect against unfair treatment (Article 15, 16).</li>
+                <li>Government schemes provide financial aid and assistive devices.</li>
+                <li>Employers must accommodate disabled employees (RPWD Act, Section 20).</li>
+                <li>Awareness promotes social inclusion and dignity.</li>
+            </ul>
+        ">
+            <i class="fas fa-wheelchair"></i>
+            <div class="category-box-title">Disability Rights</div>
+        </div>
+        <div class="category-box" data-content="
+            <h3>Legal Aid & Support</h3>
+            <ul>
+                <li>Legal Services Authorities Act ensures access to justice (1987).</li>
+                <li>Public interest litigation allows legal challenges against violations (Article 39A).</li>
+                <li>Pro bono services offer free legal representation.</li>
+                <li>NGOs and helplines assist in legal counseling.</li>
+                <li>Legal aid empowers citizens to seek justice (Legal Services Committee).</li>
+            </ul>
+        ">
+            <i class="fas fa-hands-helping"></i>
+            <div class="category-box-title">Legal Aid & Support</div>
+        </div>
+        <div class="category-box" data-content="
+            <h3>Filing Complaints & FIRs</h3>
+            <ul>
+                <li>FIRs can be filed at police stations for criminal offenses (Section 154, CrPC).</li>
+                <li>Online portals allow digital complaint registration.</li>
+                <li>Legal aid is available if police refuse to file an FIR.</li>
+                <li>Helplines assist in reporting workplace harassment and domestic abuse.</li>
+                <li>Timely complaint filing ensures proper legal action.</li>
+            </ul>
+        ">
+            <i class="fas fa-file-alt"></i>
+            <div class="category-box-title">Filing Complaints & FIRs</div>
+        </div>
+        <div class="category-box" data-content="
+            <h3>Government Schemes & Policies</h3>
+            <ul>
+                <li>Welfare programs provide financial aid and benefits (PM Jan Dhan Yojana).</li>
+                <li>Healthcare schemes like Ayushman Bharat offer medical support.</li>
+                <li>Housing schemes provide affordable accommodation (PM Awas Yojana).</li>
+                <li>Legal literacy campaigns educate citizens about their rights (Article 39A).</li>
+            </ul>
+        ">
+            <i class="fas fa-landmark"></i>
+            <div class="category-box-title">Government Schemes & Policies</div>
+        </div>
+    </div>
+</section>
+
+    <!-- Popup and Overlay -->
+    <div class="popup-overlay"></div>
+    <div class="popup">
+        <button class="popup-close">&times;</button>
+        <div class="popup-content"></div>
+    </div>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="main-content">
+        <h2 class="faq-heading">FAQ</h2>
+        <h3 class="faq-subheading">Got questions? Look here</h3>
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-item-header">General Questions</div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        <p><strong>What is this platform, and how does it help me?</strong></p>
+                        <p>This is an AI-powered legal assistant that provides instant legal guidance, helping users understand their rights and legal procedures.</p>
+                        <p><strong>Is this a replacement for a lawyer?</strong></p>
+                        <p>No, this platform provides general legal information and guidance, but it does not replace professional legal advice from a lawyer.</p>
+                        <p><strong>How accurate is the information provided?</strong></p>
+                        <p>The platform provides reliable and updated legal information, but for complex cases, consulting a legal professional is recommended.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-item-header">Usage & Features</div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        <p><strong>How do I use the chatbot for legal queries?</strong></p>
+                        <p>Simply type your question in the chatbox, and the AI will provide relevant legal information.</p>
+                        <p><strong>What legal topics does this platform cover?</strong></p>
+                        <p>It covers various topics, including family law, labor law, property law, criminal law, consumer rights, and more.</p>
+                        <p><strong>Is the chatbot available 24/7?</strong></p>
+                        <p>Yes, the chatbot is accessible anytime for legal queries.</p>
+                        <p><strong>Can I save my chat history for future reference?</strong></p>
+                        <p>Yes, registered users can access their past queries and chat history.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-item-header">Account & Accessibility</div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        <p><strong>Do I need to create an account to use this platform?</strong></p>
+                        <p>Basic access is available without registration, but creating an account allows you to save queries and access personalized features.</p>
+                        <p><strong>Is the platform accessible on mobile devices?</strong></p>
+                        <p>Yes, it works on smartphones, tablets, and desktops for convenience.</p>
+                        <p><strong>Can I change the language of the chatbot?</strong></p>
+                        <p>Currently, the platform supports multiple languages for better accessibility.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-item-header">Legal Aid & Assistance</div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        <p><strong>Does this platform provide direct legal representation?</strong></p>
+                        <p>No, but it can guide you on how to find legal aid services.</p>
+                        <p><strong>Can I get legal documents through this platform?</strong></p>
+                        <p>The platform provides information on how to obtain legal documents but does not generate official legal paperwork.</p>
+                        <p><strong>How can I connect with a lawyer if needed?</strong></p>
+                        <p>The platform provides guidance on legal aid services and connects you with legal professionals if required.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Case Companion. All Rights Reserved.</p>
+        <div class="footer-links">
+            Follow us on <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            ||<a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+        </div>
+    </footer>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Case Companion. All Rights Reserved.</p>
+        <div class="footer-links">
+            Follow us on <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            ||<a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+        </div>
+    </footer>
+
+   <!-- Animation Script -->
+   <script>
+    gsap.to(".heading, .tagline, .cta", { opacity: 1, y: -10, duration: 1, ease: "power2.out" });
+
+    let text = document.getElementById("description").innerText;
+    let words = text.split(" ");
+    let newHTML = "";
+    words.forEach((word, index) => {
+        newHTML += `<span style="opacity:0; color:inherit !important; display:inline-block; margin-right:5px;">${word} </span>`;
+    });
+    document.getElementById("description").innerHTML = newHTML;
+
+    let spans = document.querySelectorAll("#description span");
+    spans.forEach((span, index) => {
+        gsap.to(span, { opacity: 1, duration: 0.3, delay: index * 0.1, ease: "power2.out" });
+    });
+
+    // Dark mode toggle
+    const toggle = document.getElementById('dark-mode-toggle');
+    toggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        document.querySelector('.heading').classList.toggle('dark-mode');
+        document.querySelector('.tagline').classList.toggle('dark-mode');
+        document.querySelector('.description').classList.toggle('dark-mode');
+        document.querySelector('.about-heading').classList.toggle('dark-mode');
+        document.querySelector('.categories-heading').classList.toggle('dark-mode');
+        document.querySelector('.popup').classList.toggle('dark-mode');
+        document.querySelectorAll('.accordion-item').forEach(item => item.classList.toggle('dark-mode'));
+        document.querySelectorAll('.accordion-item-header').forEach(header => header.classList.toggle('dark-mode'));
+        document.querySelectorAll('.accordion-item-body-content').forEach(content => content.classList.toggle('dark-mode'));
+    });
+
+    // Intersection Observer for About Section
+    const observerOptions = {
+        threshold: 0.5
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        });
+    }, observerOptions);
+
+    const aboutHeading = document.querySelector('.about-heading');
+    observer.observe(aboutHeading);
+
+    const rectangles = document.querySelectorAll('.rectangle');
+    rectangles.forEach((rectangle, index) => {
+        observer.observe(rectangle);
+    });
+
+    // Accordion functionality
+    const accordionItems = document.querySelectorAll('.accordion-item-header');
+    accordionItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const parent = item.parentElement;
+            parent.classList.toggle('active');
+        });
+    });
+
+    // Intersection Observer for FAQ Section
+    const faqObserverOptions = {
+        threshold: 0.5
+    };
+
+    const faqObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        });
+    }, faqObserverOptions);
+
+    const faqItems = document.querySelectorAll('.accordion-item');
+    faqItems.forEach(item => {
+        faqObserver.observe(item);
+    });
+
+    // Intersection Observer for Categories Section
+    const categoriesObserverOptions = {
+        threshold: 0.5
+    };
+
+    const categoriesObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        });
+    }, categoriesObserverOptions);
+
+    const categoryBoxes = document.querySelectorAll('.category-box');
+    categoryBoxes.forEach(box => {
+        categoriesObserver.observe(box);
+    });
+
+    // Popup functionality
+    const popup = document.querySelector('.popup');
+    const popupContent = document.querySelector('.popup-content');
+    const popupOverlay = document.querySelector('.popup-overlay');
+    const popupClose = document.querySelector('.popup-close');
+
+    categoryBoxes.forEach(box => {
+        box.addEventListener('click', () => {
+            const content = box.getAttribute('data-content');
+            popupContent.innerHTML = content;
+            popup.style.display = 'block';
+            popupOverlay.style.display = 'block';
+        });
+    });
+
+    popupClose.addEventListener('click', () => {
+        popup.style.display = 'none';
+        popupOverlay.style.display = 'none';
+    });
+
+    popupOverlay.addEventListener('click', () => {
+        popup.style.display = 'none';
+        popupOverlay.style.display = 'none';
+    });
+
+    // Chatbot functionality
+    const messagesContainer = document.getElementById('chatbot-messages');
+
+    function addMessage(content, type) {
+        const message = document.createElement('div');
+        message.className = `chatbot-message ${type}`;
+        message.textContent = content;
+        messagesContainer.appendChild(message);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight; // Auto-scroll to the latest message
+    }
+
+    function simulateConversation() {
+        const conversation = [
+            { type: 'user', content: "Hi, I need help with legal advice." },
+            { type: 'bot', content: "Sure, I'm here to assist you. What specific legal issue are you facing?" },
+            { type: 'user', content: "I want to know about property laws." },
+            { type: 'bot', content: "Property laws govern buying, selling, and inheritance. Do you need help with a specific case?" },
+            { type: 'user', content: "Yes, I need help with inheritance laws." },
+            { type: 'bot', content: "Inheritance laws dictate property distribution among heirs. Can you provide more details about your case?" }
+        ];
+
+        let index = 0;
+
+        function displayNextMessage() {
+            if (index < conversation.length) {
+                const { type, content } = conversation[index];
+                addMessage(content, type);
+                index++;
+                setTimeout(displayNextMessage, 2000); // Delay before the next message
+            }
+        }
+
+        displayNextMessage();
+    }
+
+    // Start the automatic conversation when the chatbot loads
+    window.onload = simulateConversation;
+   </script>
+</body>
+</html>

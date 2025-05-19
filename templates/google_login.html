@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Login Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            background: linear-gradient(145deg, #ffe066, #ffc300);
+            padding: 80px 60px;  /* Increased padding for better content balance */
+            border-radius: 30px;
+            width: 450px;         /* Adjusted width */
+            height: 400px;        /* Increased height */
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.2s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        h1 {
+            font-size: 2.6rem;  /* Increased font size */
+            color: #3b3b3b;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.5rem;  /* Increased font size for description */
+            color: #444;
+            margin-bottom: -27px;
+        }
+
+        .emoji {
+            font-size: 3rem;  /* Bigger emoji */
+            margin: 10px 0;
+            animation: bounce 2s infinite;
+            color: black; /* Changed emoji color to black */
+        }
+
+        #g_id_onload, .g_id_signin {
+            margin: 20px auto;
+        }
+
+        .footer-text {
+            font-size: 1.2rem;   /* Increased footer text size */
+            color: #333;
+            font-weight: bold;
+            margin-top: 20px;
+            opacity: 0.85;
+            animation: fadeIn 3s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hi there <span class="emoji">😊</span></h1>
+        <p>Click below to sign in with Google</p>
+
+        <div id="g_id_onload"
+             data-client_id="689733937221-f9qtbv229ej2i399ajmstn1rggjukgkt.apps.googleusercontent.com"
+             data-context="signin"
+             data-ux_mode="popup"
+             data-login_uri="http://localhost:8000/accounts/auth-receiver/"
+             data-auto_prompt="false">
+        </div>
+
+        <div class="g_id_signin"
+             data-type="standard"
+             data-shape="pill"
+             data-theme="filled_black"
+             data-text="signin_with"
+             data-size="large"
+             data-logo_alignment="left">
+        </div>
+
+        <p class="footer-text">Your data is safe and secure</p>
+    </div>
+
+    <script src="https://accounts.google.com/gsi/client" async></script>
+</body>
+</html>
