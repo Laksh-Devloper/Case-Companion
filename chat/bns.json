@@ -1,0 +1,1237 @@
+[
+  {"text": "input: What is the Bharatiya Nyaya Sanhita?"},
+{"text": "output: The BNS is India’s new criminal code, effective July 1, 2024, replacing the IPC."},
+  
+    {"text": "input: When did the BNS come into force?"},
+    {"text": "output: The BNS came into force on July 1, 2024, as notified by the Central Government."},
+  
+    {"text": "input: Can different parts of the BNS start on different dates?"},
+    {"text": "output: Yes, the Central Government can appoint different dates for different BNS provisions."},
+  
+    {"text": "input: Who is liable for punishment under the BNS?"},
+    {"text": "output: Anyone guilty of an act or omission against BNS provisions within India is liable."},
+  
+    {"text": "input: Does the BNS apply to offences committed outside India?"},
+    {"text": "output: Yes, it applies to acts outside India if punishable within India under BNS."},
+  
+    {"text": "input: Can an Indian citizen be punished for an offence abroad under BNS?"},
+    {"text": "output: Yes, Indian citizens committing offences abroad can be tried in India under BNS."},
+  
+    {"text": "input: Does the BNS apply to offences on Indian ships or aircraft?"},
+    {"text": "output: Yes, it applies to offences on Indian-registered ships or aircraft anywhere."},
+  
+    {"text": "input: Can someone targeting a computer in India from abroad be punished?"},
+    {"text": "output: Yes, offences targeting Indian computer resources from abroad fall under BNS."},
+  
+    {"text": "input: What’s an example of an offence committed outside India under BNS?"},
+    {"text": "output: An Indian citizen committing murder abroad can be tried in India under BNS."},
+  
+    {"text": "input: Does the BNS affect laws on mutiny or desertion?"},
+    {"text": "output: No, BNS doesn’t affect laws punishing mutiny or desertion in India’s forces."},
+  
+    {"text": "input: Are special or local laws impacted by the BNS?"},
+    {"text": "output: No, special or local laws remain unaffected by the BNS provisions."},
+
+    {"text": "input: What does 'act' mean in the BNS?"},
+    {"text": "output: 'Act' means a single act or a series of acts in the BNS."},
+  
+    {"text": "input: What is an 'animal' under the BNS?"},
+    {"text": "output: An 'animal' is any living creature except a human being in the BNS."},
+  
+    {"text": "input: How is 'child' defined in the BNS?"},
+    {"text": "output: A 'child' is any person below eighteen years of age in the BNS."},
+  
+    {"text": "input: What does 'counterfeit' mean in the BNS?"},
+    {"text": "output: 'Counterfeit' is causing one thing to resemble another to deceive, knowingly or intentionally."},
+  
+    {"text": "input: Does counterfeiting require exact imitation in BNS?"},
+    {"text": "output: No, exact imitation isn’t required for counterfeiting under the BNS."},
+  
+    {"text": "input: What’s presumed if something resembles another in BNS?"},
+    {"text": "output: It’s presumed the person intended deception unless proven otherwise in BNS."},
+  
+    {"text": "input: What is a 'Court' in the BNS?"},
+    {"text": "output: A 'Court' is a Judge or body of Judges acting judicially under law."},
+  
+    {"text": "input: What does 'death' mean in the BNS?"},
+    {"text": "output: 'Death' means the death of a human being unless context suggests otherwise."},
+  
+    {"text": "input: What is 'dishonestly' in the BNS?"},
+    {"text": "output: 'Dishonestly' means acting to cause wrongful gain or loss to someone."},
+  
+    {"text": "input: What qualifies as a 'document' in the BNS?"},
+    {"text": "output: A 'document' is any matter on any substance used as evidence, including digital records."},
+  
+    {"text": "input: Is a cheque considered a document in BNS?"},
+    {"text": "output: Yes, a cheque upon a banker is a document under the BNS."},
+  
+    {"text": "input: What’s an example of a document in BNS?"},
+    {"text": "output: A contract writing usable as evidence is a document in the BNS."},
+  
+    {"text": "input: Does a map count as a document in BNS?"},
+    {"text": "output: Yes, a map intended as evidence is a document under the BNS."},
+  
+    {"text": "input: What does 'fraudulently' mean in the BNS?"},
+    {"text": "output: 'Fraudulently' means acting with intent to defraud, but not otherwise."},
+  
+    {"text": "input: How does BNS define 'gender'?"},
+    {"text": "output: 'He' in BNS refers to any person—male, female, or transgender."},
+  
+    {"text": "input: What’s 'transgender' in the BNS?"},
+    {"text": "output: 'Transgender' follows the definition in the Transgender Persons Act, 2019."},
+  
+    {"text": "input: What is 'good faith' in the BNS?"},
+    {"text": "output: 'Good faith' means acting with due care and attention in the BNS."},
+  
+    {"text": "input: What does 'Government' mean in the BNS?"},
+    {"text": "output: 'Government' means the Central Government or a State Government in BNS."},
+  
+    {"text": "input: What does 'harbour' mean in the BNS?"},
+    {"text": "output: 'Harbour' includes supplying shelter, food, or aid to evade apprehension."},
+  
+    {"text": "input: What is 'injury' under the BNS?"},
+    {"text": "output: 'Injury' is any illegal harm to body, mind, reputation, or property."},
+  
+    {"text": "input: What does 'illegal' mean in the BNS?"},
+    {"text": "output: 'Illegal' means anything that’s an offence, prohibited, or actionable civilly."},
+  
+    {"text": "input: What’s 'legally bound to do' in BNS?"},
+    {"text": "output: It’s illegal to omit what one is legally bound to do in BNS."},
+  
+    {"text": "input: Who is a 'Judge' in the BNS?"},
+    {"text": "output: A 'Judge' is anyone empowered to give definitive judgments legally in BNS."},
+  
+    {"text": "input: What does 'life' mean in the BNS?"},
+    {"text": "output: 'Life' means the life of a human being unless con text states otherwise."},
+  
+    {"text": "input: What is a 'local law' in the BNS?"},
+    {"text": "output: A 'local law' applies only to a specific part of India in BNS."},
+  
+    {"text": "input: What does 'man' mean in the BNS?"},
+    {"text": "output: 'Man' means a male human being of any age in the BNS."},
+  
+    {"text": "input: How are 'month' and 'year' calculated in BNS?"},
+    {"text": "output: 'Month' and 'year' follow the Gregorian calendar in the BNS."},
+  
+
+    {"text": "input: Are BNS offence definitions subject to exceptions?"},
+  
+    {"text": "input: Can a child under seven commit an offence in BNS?"},
+    {"text": "output: No, a child under seven can’t commit an offence under BNS exceptions."},
+  
+    {"text": "input: Is a police officer guilty of confining a murderer in BNS?"},
+    {"text": "output: No, a police officer apprehending a murderer lawfully commits no offence."},
+  
+    {"text": "input: Do BNS explanations apply throughout the code?"},
+    {"text": "output: Yes, every explanation in BNS applies consistently across all parts."},
+  
+    {"text": "input: Who possesses property held by a spouse in BNS?"},
+    {"text": "output: Property held by a spouse for someone is in that person’s possession."},
+  
+    {"text": "input: Are illegal omissions treated as acts in BNS?"},
+    {"text": "output: Yes, illegal omissions are treated as acts unless context says otherwise."},
+  
+    {"text": "input: What’s common intention liability in BNS?"},
+    {"text": "output: All persons acting with common intention are liable as if acting alone."},
+  
+    {"text": "input: Does criminal intent make several persons liable in BNS?"},
+    {"text": "output: Yes, each person with criminal intent is liable as if acting alone."},
+  
+    {"text": "input: Can an offence be caused by both act and omission in BNS?"},
+    {"text": "output: Yes, causing an effect by act and omission is the same offence."},
+
+    {"text": "input: What punishments are available under the BNS?"},
+    {"text": "output: BNS punishments include death, life imprisonment, imprisonment, forfeiture, fine, and community service."},
+  
+    {"text": "input: What types of imprisonment exist in the BNS?"},
+    {"text": "output: BNS has rigorous imprisonment with hard labour and simple imprisonment."},
+  
+    {"text": "input: What does 'rigorous imprisonment' mean in BNS?"},
+    {"text": "output: 'Rigorous imprisonment' means imprisonment with hard labour under the BNS."},
+  
+    {"text": "input: What’s 'simple imprisonment' in the BNS?"},
+    {"text": "output: 'Simple imprisonment' is imprisonment without hard labour in the BNS."},
+  
+    {"text": "input: Can property be forfeited as punishment in BNS?"},
+    {"text": "output: Yes, forfeiture of property is a punishment under the BNS."},
+  
+    {"text": "input: Is community service a punishment in BNS?"},
+    {"text": "output: Yes, community service is a recognized punishment in the BNS."},
+  
+    {"text": "input: Can BNS punishments be commuted?"},
+    {"text": "output: Yes, the appropriate Government can commute BNS punishments without offender consent."},
+  
+    {"text": "input: Who can commute a death sentence in BNS?"},
+    {"text": "output: The Central Government can commute a death sentence under the BNS."},
+  
+    {"text": "input: Who commutes sentences for state offences in BNS?"},
+    {"text": "output: The State Government commutes sentences for state offences in the BNS."},
+  
+    {"text": "input: What law governs commutation in BNS?"},
+    {"text": "input: How is life imprisonment calculated in BNS?"},
+    {"text": "output: Life imprisonment is reckoned as twenty years unless otherwise provided in BNS."},
+  
+    {"text": "input: Can life imprisonment exceed twenty years in BNS?"},
+    {"text": "output: Yes, if the BNS specifies otherwise, life imprisonment can exceed twenty years."},
+  
+    {"text": "input: How are punishment fractions handled in BNS?"},
+    {"text": "output: Fractions of punishment terms use life imprisonment as twenty years in BNS."},
+  
+    {"text": "input: Can a court choose the type of imprisonment in BNS?"},
+    {"text": "output: Yes, courts can order wholly rigorous, wholly simple, or mixed imprisonment in BNS."},
+  
+    {"text": "input: What’s a mixed imprisonment sentence in BNS?"},
+    {"text": "output: A mixed sentence is part rigorous and part simple imprisonment in BNS."},
+  
+    {"text": "input: Who decides if imprisonment is rigorous or simple in BNS?"},
+    {"text": "output: The sentencing court decides if imprisonment is rigorous or simple in BNS."},
+  
+    {"text": "input: Is there a limit to fines in BNS if unspecified?"},
+    {"text": "output: No, if unspecified, fines are unlimited but must not be excessive in BNS."},
+  
+    {"text": "input: Can a court add imprisonment for unpaid fines in BNS?"},
+    {"text": "output: Yes, courts can order imprisonment for unpaid fines in addition to other sentences."},
+  
+    {"text": "input: What happens if a fine isn’t paid in BNS?"},
+    {"text": "output: Offenders face extra imprisonment if they don’t pay fines in BNS."},
+  
+    {"text": "input: How long can imprisonment for unpaid fines last in BNS?"},
+    {"text": "output: Imprisonment for unpaid fines can’t exceed one-fourth the offence’s max term."},
+  
+    {"text": "input: What type of imprisonment applies for unpaid fines in BNS?"},
+    {"text": "output: Imprisonment for unpaid fines can be any type the offender could receive."},
+  
+    {"text": "input: What’s the max imprisonment for a fine up to 5,000 rupees?"},
+    {"text": "output: Max imprisonment for a fine up to 5,000 rupees is two months."},
+  
+    {"text": "input: What’s the max imprisonment for a fine up to 10,000 rupees?"},
+    {"text": "output: Max imprisonment for a fine up to 10,000 rupees is four months."},
+  
+    {"text": "input: What’s the max imprisonment for a fine over 10,000 rupees?"},
+    {"text": "output: Max imprisonment for a fine over 10,000 rupees is one year in BNS."},
+  
+    {"text": "input: When does imprisonment for unpaid fines end in BNS?"},
+    {"text": "output: Imprisonment ends when the fine is paid or legally levied in BNS."},
+  
+    {"text": "input: Can partial fine payment reduce imprisonment in BNS?"},
+    {"text": "output: Yes, partial payment reduces imprisonment proportionally in BNS."},
+  
+    {"text": "input: How long can a fine be collected after sentencing in BNS?"},
+    {"text": "output: Fines can be levied within six years or longer if imprisonment exceeds six years."},
+  
+    {"text": "input: Does an offender’s death cancel fine liability in BNS?"},
+    {"text": "output: No, the offender’s death doesn’t discharge property liable for fines in BNS."},
+
+    {"text": "input: Can someone be punished twice for parts of one offence in BNS?"},
+    {"text": "output: No, offenders aren’t punished for multiple parts unless expressly provided in BNS."},
+  
+    {"text": "input: What’s the punishment limit for overlapping offences in BNS?"},
+    {"text": "output: Punishment can’t exceed the max for any single offence in BNS."},
+  
+    {"text": "input: Can A be punished separately for hitting Z and Y in BNS?"},
+    {"text": "output: Yes, A can be punished separately for hitting Z and Y in BNS."},
+
+    {"text": "input: How is punishment set if guilt is unclear in BNS?"},
+    {"text": "output: If guilt is doubtful, punishment is for the offence with the lowest penalty."},
+  
+    {"text": "input: What’s solitary confinement in BNS?"},
+    {"text": "output: Solitary confinement is isolation up to three months for rigorous imprisonment in BNS."},
+  
+    {"text": "input: What’s the max solitary confinement for six months imprisonment?"},
+    {"text": "output: Max solitary confinement is one month for up to six months imprisonment."},
+  
+    {"text": "input: What’s the max solitary confinement for one year imprisonment?"},
+    {"text": "output: Max solitary confinement is two months for six months to one year imprisonment."},
+  
+    {"text": "input: What’s the max solitary confinement for over one year imprisonment?"},
+    {"text": "output: Max solitary confinement is three months for over one year imprisonment."},
+  
+    {"text": "input: How long can solitary confinement last at once in BNS?"},
+    {"text": "output: Solitary confinement can’t exceed fourteen days at a time in BNS."},
+  
+    {"text": "input: What’s the interval rule for solitary confinement in BNS?"},
+    {"text": "output: Intervals between solitary confinement must equal or exceed the confinement period."},
+  
+    {"text": "input: What’s the monthly limit for solitary confinement in BNS?"},
+    {"text": "output: Solitary confinement can’t exceed seven days per month if over three months."},
+  
+    {"text": "input: What’s the enhanced punishment for repeat offenders in BNS?"},
+    {"text": "output: Repeat offenders face life imprisonment or up to ten years for certain offences."},
+  
+  
+    {"text": "input: What’s the minimum prior sentence for enhanced punishment in BNS?"},
+    {"text": "output: A prior three-year imprisonment sentence triggers enhanced punishment in BNS."},
+  
+    {"text": "input: Is an act by a person bound by law an offence in BNS?"},
+    {"text": "output: No, acts done by a person bound by law aren’t offences in BNS."},
+  
+    {"text": "input: Can a soldier firing on a mob under orders be punished in BNS?"},
+    {"text": "output: No, a soldier firing under lawful orders commits no offence in BNS."},
+  
+    {"text": "input: What if someone mistakenly believes they’re bound by law in BNS?"},
+    {"text": "output: Acts done in good faith by mistake of fact aren’t offences in BNS."},
+  
+    {"text": "input: Can an officer arresting the wrong person be punished in BNS?"},
+    {"text": "output: No, an officer arresting in good faith belief commits no offence in BNS."},
+
+    {"text": "input: Is a Judge’s act an offence under BNS?"},
+    {"text": "output: No, acts by a Judge in good faith judicially aren’t offences in BNS."},
+  
+    {"text": "input: Does a Judge’s belief in legal power matter in BNS?"},
+    {"text": "output: Yes, a Judge acting in good faith belief of power commits no offence."},
+
+    {"text": "input: Are acts under a Court order offences in BNS?"},
+    {"text": "output: No, acts pursuant to a Court order in force aren’t offences in BNS."},
+  
+    {"text": "input: What if a Court lacks jurisdiction in BNS?"},
+    {"text": "output: Acts under a Court order in good faith aren’t offences despite jurisdiction."},
+  
+    {"text": "input: Is an act justified by law an offence in BNS?"},
+    {"text": "output: No, acts justified by law or good faith belief aren’t offences in BNS."},
+  
+    {"text": "input: Can someone seizing a supposed murderer be punished in BNS?"},
+    {"text": "output: No, seizing a supposed murderer in good faith isn’t an offence in BNS."},
+
+    {"text": "input: What’s the accident exception in BNS?"},
+    {"text": "output: Acts done accidentally without intent, with care, aren’t offences in BNS."},
+  
+    {"text": "input: Is accidentally killing with a hatchet an offence in BNS?"},
+    {"text": "output: No, if done lawfully with caution, it’s not an offence in BNS."},
+
+    {"text": "input: Can an act causing harm to prevent greater harm be an offence in BNS?"},
+    {"text": "output: No, acts in good faith to prevent harm aren’t offences in BNS."},
+  
+    {"text": "input: Can a captain sinking a boat to save passengers be punished in BNS?"},
+    {"text": "output: No, if done in good faith to avoid greater harm, it’s not an offence."},
+  
+    {"text": "input: Is pulling down houses in a fire an offence in BNS?"},
+    {"text": "output: No, if done in good faith to stop a fire, it’s not an offence."},
+  
+    
+    {"text": "input: Can a child under seven commit an offence in BNS?"},
+    {"text": "output: No, acts by a child under seven aren’t offences under the BNS."},
+  
+    {"text": "input: Can a child aged seven to twelve commit an offence in BNS?"},
+    {"text": "output: No, if they lack maturity to understand consequences, it’s not an offence."},
+  
+
+    {"text": "input: Can a person of unsound mind commit an offence in BNS?"},
+    {"text": "output: No, acts by someone unable to understand wrongness aren’t offences in BNS."},
+  
+    {"text": "input: Is an act by someone involuntarily intoxicated an offence in BNS?"},
+    {"text": "output: No, if intoxication prevents understanding, it’s not an offence in BNS."},
+  
+    {"text": "input: Does voluntary intoxication excuse offences in BNS?"},
+    {"text": "output: No, voluntary intoxication doesn’t excuse offences under the BNS."},
+
+    {"text": "input: How is intent judged in intoxication cases in BNS?"},
+    {"text": "output: Intoxicated persons are judged as if sober unless involuntarily intoxicated in BNS."},
+  
+    {"text": "input: Can consented harm be an offence in BNS?"},
+    {"text": "output: No, harm consented to by adults isn’t an offence if unintended in BNS."},
+  
+    {"text": "input: Is fencing injury an offence if consented to in BNS?"},
+    {"text": "output: No, fencing injuries with consent aren’t offences if fair in BNS."},
+  
+    {"text": "input: Can a consented act for benefit be an offence in BNS?"},
+    {"text": "output: No, acts in good faith for benefit with consent aren’t offences in BNS."},
+  
+    {"text": "input: Is a surgeon operating with consent liable in BNS?"},
+    {"text": "output: No, a surgeon operating in good faith with consent commits no offence."},
+
+    {"text": "input: Can acts for a child’s benefit be offences in BNS?"},
+    {"text": "output: No, good faith acts for a child’s benefit aren’t offences with consent."},
+  
+    {"text": "input: Is surgery on a child without consent an offence in BNS?"},
+    {"text": "output: No, if in good faith for benefit by guardian consent, it’s not an offence."},
+  
+    {"text": "input: Can causing death for a child’s benefit be excused in BNS?"},
+    {"text": "output: No, intentionally causing death isn’t excused under this BNS exception."},
+  
+    {"text": "input: Is consent under fear valid in BNS?"},
+    {"text": "output: No, consent given under fear or misconception isn’t valid in BNS."},
+  
+    {"text": "input: Does consent from an intoxicated person count in BNS?"},
+    {"text": "output: No, consent from someone unable to understand due to intoxication doesn’t count."},
+
+    {"text": "input: Does consent excuse independent offences in BNS?"},
+    {"text": "output: No, consent doesn’t excuse acts that are offences regardless of harm in BNS."},
+  
+    {"text": "input: Is causing miscarriage with consent an offence in BNS?"},
+    {"text": "output: Yes, causing miscarriage is an offence unless to save life in BNS."},
+
+    {"text": "input: Can acts without consent be excused in BNS?"},
+    {"text": "output: Yes, good faith acts for benefit without consent are excused if impossible otherwise."},
+  
+    {"text": "input: Is trepanning an unconscious person an offence in BNS?"},
+    {"text": "output: No, trepanning in good faith for benefit without consent isn’t an offence."},
+  
+    {"text": "input: Can shooting a tiger to save someone be an offence in BNS?"},
+    {"text": "output: No, shooting a tiger in good faith to save someone isn’t an offence."},
+
+    {"text": "input: Is a harmful communication an offence in BNS?"},
+    {"text": "output: No, good faith communications for benefit aren’t offences in BNS."},
+  
+    {"text": "input: Can a surgeon’s warning causing death be an offence in BNS?"},
+    {"text": "output: No, a surgeon’s good faith warning isn’t an offence despite harm in BNS."},
+  
+
+    {"text": "input: Can threats excuse an offence in BNS?"},
+    {"text": "output: Yes, acts under threats of instant death aren’t offences, except murder."},
+  
+    {"text": "input: Does joining dacoits under threat excuse offences in BNS?"},
+    {"text": "output: No, voluntarily joining dacoits under lesser threats doesn’t excuse offences in BNS."},
+  
+
+    {"text": "input: Is slight harm an offence in BNS?"},
+    {"text": "output: No, acts causing slight harm that wouldn’t bother most aren’t offences in BNS."},
+
+    {"text": "input: Is private defence an offence in BNS?"},
+    {"text": "output: No, acts done in the exercise of private defence aren’t offences in BNS."},
+
+    {"text": "input: What’s the right of private defence in BNS?"},
+    {"text": "output: Everyone can defend their body or property under restrictions in BNS."},
+  
+    {"text": "input: Can you defend against theft in BNS?"},
+    {"text": "output: Yes, private defence applies to theft, robbery, mischief, or trespass in BNS."},
+  
+
+    {"text": "input: Can you defend against an unsound person in BNS?"},
+    {"text": "output: Yes, private defence applies as if the act were an offence in BNS."},
+  
+    {"text": "input: Is defending against a madman’s attack an offence in BNS?"},
+    {"text": "output: No, defending against a madman’s attack is allowed under BNS private defence."},
+
+    {"text": "input: Are there limits to private defence in BNS?"},
+    {"text": "output: Yes, no private defence against public servants or when authorities can help."},
+  
+    {"text": "input: Can you use private defence against a police officer in BNS?"},
+    {"text": "output: No, not unless the officer’s act causes fear of death or grievous hurt."},
+  
+
+    {"text": "input: When can private defence cause death in BNS?"},
+    {"text": "output: Private defence can cause death against assaults causing fear of death or rape."},
+  
+    {"text": "input: Can you kill to prevent kidnapping in BNS?"},
+    {"text": "output: Yes, private defence allows killing to prevent kidnapping under BNS restrictions."},
+
+    {"text": "input: When can private defence cause harm but not death in BNS?"},
+    {"text": "output: For lesser offences, private defence allows harm but not death in BNS."},
+  
+
+    {"text": "input: When does private defence of the body start in BNS?"},
+    {"text": "output: It starts when there’s reasonable fear of danger to the body in BNS."},
+  
+    {"text": "input: Can private defence of property cause death in BNS?"},
+    {"text": "output: Yes, against robbery, house-breaking at night, or arson in BNS."},
+  
+    {"text": "input: Can private defence of property cause lesser harm in BNS?"},
+    {"text": "output: Yes, for theft or mischief, it allows harm but not death in BNS."},
+  
+    {"text": "input: How long does private defence of property last in BNS?"},
+    {"text": "output: It lasts until the threat ends or property is recovered in BNS."},
+  
+    {"text": "input: Can private defence harm innocents in BNS?"},
+    {"text": "output: Yes, if unavoidable against a deadly assault, it’s allowed in BNS."},
+  
+    {"text": "input: Is harming kids in a mob attack an offence in BNS?"},
+    {"text": "output: No, if defending against a deadly mob, it’s not an offence in BNS."},
+
+
+    {"text": "input: What is abetment in the BNS?"},
+    {"text": "output: Abetment is instigating, conspiring, or aiding someone to do an offence in BNS."},
+  
+    {"text": "input: How can someone abet an offence in BNS?"},
+    {"text": "output: By instigating, engaging in a conspiracy, or intentionally aiding an offence in BNS."},
+  
+    {"text": "input: What’s instigation in abetment under BNS?"},
+    {"text": "output: Instigation is wilfully misrepresenting or concealing facts to cause an act in BNS."},
+  
+    {"text": "input: Can lying to cause an arrest be abetment in BNS?"},
+    {"text": "output: Yes, lying to cause an arrest is abetment by instigation in BNS."},
+  
+    {"text": "input: What’s an example of instigating abetment in BNS?"},
+    {"text": "output: B lies to A that C is Z, causing A to arrest C in BNS."},
+  
+    {"text": "input: What’s aiding in abetment under BNS?"},
+    {"text": "output: Aiding is doing anything to facilitate an offence’s commission in BNS."},
+  
+    {"text": "input: Does abetment require the offence to happen in BNS?"},
+    {"text": "output: No, abetment doesn’t require the offence to be committed in BNS."},
+  
+    {"text": "input: Can conspiring to commit an offence be abetment in BNS?"},
+    {"text": "output: Yes, conspiring with others to commit an offence is abetment in BNS."},
+  
+    {"text": "input: What’s needed for conspiracy to be abetment in BNS?"},
+    {"text": "output: An act or omission must occur pursuant to the conspiracy in BNS."},
+  
+    {"text": "input: Is aiding before an offence abetment in BNS?"},
+    {"text": "output: Yes, aiding before or during an offence counts as abetment in BNS."},
+  
+    {"text": "input: Who is an abettor in the BNS?"},
+    {"text": "output: An abettor is someone who abets an offence or its potential commission in BNS."},
+  
+    {"text": "input: Can abetting an illegal omission be an offence in BNS?"},
+    {"text": "output: Yes, abetting an illegal omission can be an offence in BNS."},
+  
+    {"text": "input: Does abetment need the act to succeed in BNS?"},
+    {"text": "output: No, abetment doesn’t need the act to succeed or cause effect in BNS."},
+  
+    {"text": "input: Can abetting a non-offence be abetment in BNS?"},
+    {"text": "output: Yes, if the act would be an offence by a capable person in BNS."},
+  
+    {"text": "input: What’s the intent requirement for abetment in BNS?"},
+    {"text": "output: Abetment requires the same intent or knowledge as the abettor in BNS."},
+
+    {"text": "input: What’s the punishment for abetment in BNS?"},
+    {"text": "output: Punishment for abetment varies by the offence abetted in the BNS."},
+  
+    {"text": "input: Can abetting murder be punished in BNS?"},
+    {"text": "output: Yes, abetting murder carries the same penalty as murder in BNS."},
+  
+    {"text": "input: What’s criminal conspiracy in BNS?"},
+    {"text": "output: Criminal conspiracy is agreeing to commit an offence with acts in BNS."},
+  
+    {"text": "input: Is an attempt an offence in BNS?"},
+    {"text": "output: Yes, attempting an offence is punishable under the BNS provisions."},
+  
+    {"text": "input: Can abetting an attempt be an offence in BNS?"},
+    {"text": "output: Yes, abetting an attempt to commit an offence is punishable in BNS."},
+  
+    {"text": "input: Does abetment apply to all offences in BNS?"},
+    {"text": "output: Yes, abetment applies to any offence defined in the BNS."},
+  
+    {"text": "input: Can someone abet by silence in BNS?"},
+    {"text": "output: Yes, wilful concealment by silence can be abetment in BNS."},
+  
+    {"text": "input: Is abetting a child’s act an offence in BNS?"},
+    {"text": "output: Yes, if the act would be an offence by an adult in BNS."},
+  
+  
+
+
+    {"text": "input: What’s culpable homicide in BNS?"},
+    {"text": "output: Culpable homicide is causing death by an act with intent or knowledge in BNS."},
+  
+    {"text": "input: What’s murder in BNS?"},
+    {"text": "output: Murder is culpable homicide with intent to kill or cause deadly harm in BNS."},
+  
+    {"text": "input: What’s the punishment for murder in BNS?"},
+    {"text": "output: Murder is punishable with death or life imprisonment and fine in BNS."},
+  
+    {"text": "input: What’s the punishment for culpable homicide not amounting to murder?"},
+    {"text": "output: It’s imprisonment up to ten years or life, and fine, in BNS."},
+  
+    {"text": "input: What’s hurt in BNS?"},
+    {"text": "output: Hurt is causing bodily pain, disease, or infirmity to someone in BNS."},
+  
+    {"text": "input: What’s grievous hurt in BNS?"},
+    {"text": "output: Grievous hurt includes severe injuries like fractures or permanent damage in BNS."},
+  
+    {"text": "input: What’s the punishment for causing hurt in BNS?"},
+    {"text": "output: Causing hurt is punishable with up to one year imprisonment or fine in BNS."},
+  
+    {"text": "input: What’s the punishment for grievous hurt in BNS?"},
+    {"text": "output: Grievous hurt carries up to seven years imprisonment and fine in BNS."},
+  
+    {"text": "input: What’s criminal force in BNS?"},
+    {"text": "output: Criminal force is using force intentionally without consent to offend in BNS."},
+  
+    {"text": "input: What’s assault in BNS?"},
+    {"text": "output: Assault is gesturing or preparing to use criminal force in BNS."},
+  
+    {"text": "input: What’s the punishment for assault in BNS?"},
+    {"text": "output: Assault is punishable with up to three months imprisonment or fine in BNS."},
+  
+    {"text": "input: What’s kidnapping in BNS?"},
+    {"text": "output: Kidnapping is taking a minor or person of unsound mind unlawfully in BNS."},
+  
+    {"text": "input: What’s abduction in BNS?"},
+    {"text": "output: Abduction is compelling or inducing someone to move by force in BNS."},
+  
+    {"text": "input: What’s the punishment for kidnapping in BNS?"},
+    {"text": "output: Kidnapping carries up to seven years imprisonment and fine in BNS."},
+  
+    {"text": "input: What’s rape in BNS?"},
+    {"text": "output: Rape is sexual intercourse without consent or with a minor in BNS."},
+  
+    {"text": "input: What’s the punishment for rape in BNS?"},
+    {"text": "output: Rape is punishable with life imprisonment or death in BNS."},
+  
+    {"text": "input: What’s dowry death in BNS?"},
+    {"text": "output: Dowry death is causing a woman’s death over dowry demands in BNS."},
+  
+    {"text": "input: What’s the punishment for dowry death in BNS?"},
+    {"text": "output: Dowry death carries life imprisonment or seven years minimum in BNS."},
+  
+    {"text": "input: What’s acid attack in BNS?"},
+    {"text": "output: Acid attack is throwing acid to cause grievous hurt in BNS."},
+  
+    {"text": "input: What’s the punishment for acid attack in BNS?"},
+    {"text": "output: Acid attack is punishable with ten years to life imprisonment in BNS."},
+  
+  
+
+    {"text": "input: What’s waging war against India in BNS?"},
+    {"text": "output: Waging war is attacking India’s government with violence or force in BNS."},
+  
+    {"text": "input: What’s the punishment for waging war in BNS?"},
+    {"text": "output: Waging war against India is punishable with death or life imprisonment in BNS."},
+  
+    {"text": "input: What’s conspiring to wage war in BNS?"},
+    {"text": "output: Conspiring to wage war is planning to attack India’s government in BNS."},
+  
+    {"text": "input: What’s the punishment for conspiring to wage war in BNS?"},
+    {"text": "output: Conspiracy to wage war carries life imprisonment or ten years in BNS."},
+  
+    {"text": "input: What’s collecting arms for war in BNS?"},
+    {"text": "output: Collecting arms to wage war against India is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for collecting arms for war in BNS?"},
+    {"text": "output: Collecting arms for war is punishable with life imprisonment in BNS."},
+  
+    {"text": "input: What’s concealing war plans in BNS?"},
+    {"text": "output: Concealing plans to wage war against India is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for concealing war plans in BNS?"},
+    {"text": "output: Concealing war plans carries up to ten years imprisonment in BNS."},
+  
+    {"text": "input: What’s assaulting the President in BNS?"},
+    {"text": "output: Assaulting the President or Governor to restrain them is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for assaulting high officials in BNS?"},
+    {"text": "output: Assaulting high officials is punishable with up to seven years in BNS."},
+  
+    {"text": "input: What’s an offence against India’s unity in BNS?"},
+    {"text": "output: Inciting hatred or disaffection against India’s unity is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for offences against unity in BNS?"},
+    {"text": "output: Offences against unity carry life imprisonment or seven years in BNS."},
+  
+    {"text": "input: What’s waging war against an ally in BNS?"},
+    {"text": "output: Waging war against India’s allied power is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for waging war against an ally in BNS?"},
+    {"text": "output: Waging war against an ally is punishable with life imprisonment in BNS."},
+  
+    {"text": "input: What’s depredation on territories in BNS?"},
+    {"text": "output: Committing depredation on territories at peace with India is an offence."},
+  
+    {"text": "input: What’s the punishment for depredation in BNS?"},
+    {"text": "output: Depredation on territories carries up to seven years imprisonment in BNS."},
+  
+    {"text": "input: What’s receiving war property in BNS?"},
+    {"text": "output: Receiving property taken during war against India is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for receiving war property in BNS?"},
+    {"text": "output: Receiving war property is punishable with up to seven years in BNS."},
+  
+    {"text": "input: What’s aiding a state prisoner’s escape in BNS?"},
+    {"text": "output: Helping a state prisoner or war captive escape is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for aiding a prisoner’s escape in BNS?"},
+    {"text": "output: Aiding a state prisoner’s escape carries up to ten years in BNS."},
+
+
+
+    {"text": "input: What’s theft in BNS?"},
+    {"text": "output: Theft is dishonestly taking movable property without consent in BNS."},
+  
+    {"text": "input: What’s the punishment for theft in BNS?"},
+    {"text": "output: Theft carries up to seven years imprisonment and fine in BNS."},
+  
+    {"text": "input: What’s extortion in BNS?"},
+    {"text": "output: Extortion is inducing fear to obtain property or consent in BNS."},
+  
+    {"text": "input: What’s the punishment for extortion in BNS?"},
+    {"text": "output: Extortion is punishable with up to seven years and fine in BNS."},
+  
+    {"text": "input: What’s robbery in BNS?"},
+    {"text": "output: Robbery is theft or extortion with violence or threat in BNS."},
+  
+    {"text": "input: What’s the punishment for robbery in BNS?"},
+    {"text": "output: Robbery carries up to ten years imprisonment, or life if deadly in BNS."},
+  
+    {"text": "input: What’s dacoity in BNS?"},
+    {"text": "output: Dacoity is robbery by five or more persons together in BNS."},
+  
+    {"text": "input: What’s the punishment for dacoity in BNS?"},
+    {"text": "output: Dacoity is punishable with life imprisonment or seven years in BNS."},
+  
+    {"text": "input: What’s criminal misappropriation in BNS?"},
+    {"text": "output: Criminal misappropriation is dishonestly using property entrusted to you in BNS."},
+  
+    {"text": "input: What’s the punishment for criminal misappropriation in BNS?"},
+    {"text": "output: Criminal misappropriation carries up to two years or fine in BNS."},
+  
+    {"text": "input: What’s criminal breach of trust in BNS?"},
+    {"text": "output: Criminal breach of trust is dishonestly misusing entrusted property in BNS."},
+  
+    {"text": "input: What’s the punishment for criminal breach of trust in BNS?"},
+    {"text": "output: Criminal breach of trust gets up to seven years and fine in BNS."},
+  
+    {"text": "input: What’s cheating in BNS?"},
+    {"text": "output: Cheating is deceiving someone to deliver property or consent in BNS."},
+  
+    {"text": "input: What’s the punishment for cheating in BNS?"},
+    {"text": "output: Cheating carries up to seven years imprisonment and fine in BNS."},
+  
+    {"text": "input: What’s mischief in BNS?"},
+    {"text": "output: Mischief is intentionally causing damage to property in BNS."},
+  
+    {"text": "input: What’s the punishment for mischief in BNS?"},
+    {"text": "output: Mischief is punishable with up to one year or fine in BNS."},
+  
+    {"text": "input: What’s arson in BNS?"},
+    {"text": "output: Arson is mischief by fire or explosive to property in BNS."},
+  
+    {"text": "input: What’s the punishment for arson in BNS?"},
+    {"text": "output: Arson carries up to seven years imprisonment and fine in BNS."},
+  
+    {"text": "input: What’s trespass in BNS?"},
+    {"text": "output: Trespass is entering property to commit an offence or intimidate in BNS."},
+  
+    {"text": "input: What’s the punishment for criminal trespass in BNS?"},
+    {"text": "output: Criminal trespass is punishable with up to three months or fine in BNS."},
+  
+    {"text": "input: What’s forgery in BNS?"},
+    {"text": "output: Forgery is making a false document to deceive or injure in BNS."},
+  
+    {"text": "input: What’s the punishment for forgery in BNS?"},
+    {"text": "output: Forgery carries up to two years imprisonment or fine in BNS."},
+  
+    {"text": "input: What’s forgery for cheating in BNS?"},
+    {"text": "output: Forgery for cheating is making a false document to deceive in BNS."},
+  
+    {"text": "input: What’s the punishment for forgery for cheating in BNS?"},
+    {"text": "output: Forgery for cheating gets up to seven years and fine in BNS."},
+  
+    {"text": "input: What’s forging a court record in BNS?"},
+    {"text": "output: Forging a court record or ID is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for forging a court record in BNS?"},
+    {"text": "output: Forging a court record carries up to seven years and fine in BNS."},
+  
+    {"text": "input: What’s forging a valuable security in BNS?"},
+    {"text": "output: Forging a valuable security like a will is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for forging a valuable security in BNS?"},
+    {"text": "output: Forging a valuable security gets life or seven years in BNS."},
+  
+    {"text": "input: What’s counterfeiting a seal in BNS?"},
+    {"text": "output: Counterfeiting a seal to authenticate falsely is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for counterfeiting a seal in BNS?"},
+    {"text": "output: Counterfeiting a seal carries life or seven years in BNS."},
+  
+    {"text": "input: What’s falsifying accounts in BNS?"},
+    {"text": "output: Falsifying accounts as a clerk to defraud is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for falsifying accounts in BNS?"},
+    {"text": "output: Falsifying accounts gets up to seven years or fine in BNS."},
+  
+    {"text": "input: What’s a property mark in BNS?"},
+    {"text": "output: A property mark denotes ownership of movable property in BNS."},
+  
+    {"text": "input: What’s using a false property mark in BNS?"},
+    {"text": "output: Using a false property mark to deceive is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for using a false property mark in BNS?"},
+    {"text": "output: Using a false property mark carries up to one year or fine."},
+  
+    {"text": "input: What’s counterfeiting a property mark in BNS?"},
+    {"text": "output: Counterfeiting a property mark to deceive is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for counterfeiting a property mark in BNS?"},
+    {"text": "output: Counterfeiting a property mark gets up to two years or fine in BNS."},
+  
+    {"text": "input: What’s selling goods with a counterfeit mark in BNS?"},
+    {"text": "output: Selling goods with a counterfeit property mark is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for selling counterfeit marked goods in BNS?"},
+    {"text": "output: Selling counterfeit marked goods carries up to one year or fine in BNS."},
+  
+    {"text": "input: What’s tampering with a property mark in BNS?"},
+    {"text": "output: Tampering with a property mark to harm is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for tampering with a property mark in BNS?"},
+    {"text": "output: Tampering with a property mark gets up to one year or fine in BNS."},
+
+  
+
+    {"text": "input: What’s counterfeiting currency in BNS?"},
+    {"text": "output: Counterfeiting currency is making fake notes or coins to deceive in BNS."},
+  
+    {"text": "input: What’s the punishment for counterfeiting currency in BNS?"},
+    {"text": "output: Counterfeiting currency carries life imprisonment or ten years in BNS."},
+  
+    {"text": "input: What’s using counterfeit currency in BNS?"},
+    {"text": "output: Using fake currency knowing it’s counterfeit is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for using counterfeit currency in BNS?"},
+    {"text": "output: Using counterfeit currency gets up to seven years or fine in BNS."},
+  
+    {"text": "input: What’s possessing counterfeit currency in BNS?"},
+    {"text": "output: Possessing fake currency with intent to use is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for possessing counterfeit currency in BNS?"},
+    {"text": "output: Possessing counterfeit currency carries up to seven years or fine in BNS."},
+  
+    {"text": "input: What’s making tools for counterfeiting in BNS?"},
+    {"text": "output: Making tools to counterfeit currency is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for making counterfeiting tools in BNS?"},
+    {"text": "output: Making counterfeiting tools gets up to seven years or fine in BNS."},
+  
+    {"text": "input: What’s importing counterfeit currency in BNS?"},
+    {"text": "output: Importing or exporting fake currency is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for importing counterfeit currency in BNS?"},
+    {"text": "output: Importing counterfeit currency carries life or ten years in BNS."},
+  
+    {"text": "input: What’s unlawful assembly in BNS?"},
+    {"text": "output: Unlawful assembly is five or more persons with illegal intent in BNS."},
+  
+    {"text": "input: What’s the punishment for unlawful assembly in BNS?"},
+    {"text": "output: Unlawful assembly carries up to six months or fine in BNS."},
+  
+    {"text": "input: What’s rioting in BNS?"},
+    {"text": "output: Rioting is using violence in an unlawful assembly in BNS."},
+  
+    {"text": "input: What’s the punishment for rioting in BNS?"},
+    {"text": "output: Rioting is punishable with up to two years or fine in BNS."},
+  
+    {"text": "input: What’s promoting enmity in BNS?"},
+    {"text": "output: Promoting enmity between groups on religion or race is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for promoting enmity in BNS?"},
+    {"text": "output: Promoting enmity carries up to three years or fine in BNS."},
+  
+    {"text": "input: What’s affray in BNS?"},
+    {"text": "output: Affray is two or more persons fighting in public in BNS."},
+  
+    {"text": "input: What’s the punishment for affray in BNS?"},
+    {"text": "output: Affray is punishable with up to one month or fine in BNS."},
+  
+    {"text": "input: What’s public nuisance in BNS?"},
+    {"text": "output: Public nuisance is causing annoyance or danger to the public in BNS."},
+  
+    {"text": "input: What’s the punishment for public nuisance in BNS?"},
+    {"text": "output: Public nuisance carries a fine or community service in BNS."},
+  
+    {"text": "input: What’s a public servant taking a bribe in BNS?"},
+    {"text": "output: A public servant accepting a bribe for duty is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for bribery by a public servant in BNS?"},
+    {"text": "output: Bribery by a public servant carries up to seven years in BNS."},
+  
+    {"text": "input: What’s disobeying law as a public servant in BNS?"},
+    {"text": "output: A public servant intentionally disobeying law is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for disobeying law by a public servant in BNS?"},
+    {"text": "output: Disobeying law as a public servant gets up to one year in BNS."},
+  
+    {"text": "input: What’s personating a public servant in BNS?"},
+    {"text": "output: Pretending to be a public servant is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for personating a public servant in BNS?"},
+    {"text": "output: Personating a public servant carries up to two years or fine in BNS."},
+  
+    {"text": "input: What’s neglecting duty as a public servant in BNS?"},
+    {"text": "output: Neglecting lawful duty as a public servant is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for neglecting duty in BNS?"},
+    {"text": "output: Neglecting duty gets up to three months or fine in BNS."},
+  
+    {"text": "input: What’s a public servant framing false documents in BNS?"},
+    {"text": "output: A public servant making false documents is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for false documents by a public servant in BNS?"},
+    {"text": "output: False documents by a public servant carry up to seven years in BNS."},
+  
+    {"text": "input: What’s absconding to avoid summons in BNS?"},
+    {"text": "output: Absconding to avoid a legal summons is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for absconding to avoid summons in BNS?"},
+    {"text": "output: Absconding to avoid summons carries up to one month or fine in BNS."},
+  
+    {"text": "input: What’s obstructing a public servant in BNS?"},
+    {"text": "output: Obstructing a public servant’s lawful duty is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for obstructing a public servant in BNS?"},
+    {"text": "output: Obstructing a public servant gets up to one year or fine in BNS."},
+  
+    {"text": "input: What’s refusing to take an oath in BNS?"},
+    {"text": "output: Refusing a lawful oath as required is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for refusing an oath in BNS?"},
+    {"text": "output: Refusing an oath carries up to six months or fine in BNS."},
+  
+    {"text": "input: What’s giving false information to a public servant in BNS?"},
+    {"text": "output: Giving false info to a public servant is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for false information in BNS?"},
+    {"text": "output: False information to a public servant gets up to six months in BNS."},
+  
+    {"text": "input: What’s disrespecting a public servant in court in BNS?"},
+    {"text": "output: Disrespecting a public servant in court is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for disrespecting a public servant in BNS?"},
+    {"text": "output: Disrespecting a public servant carries up to six months or fine in BNS."},
+
+  
+
+
+    {"text": "input: What’s giving false evidence in BNS?"},
+    {"text": "output: Giving false evidence is knowingly lying under oath in BNS."},
+  
+    {"text": "input: What’s the punishment for giving false evidence in BNS?"},
+    {"text": "output: Giving false evidence carries up to seven years and fine in BNS."},
+  
+    {"text": "input: What’s fabricating false evidence in BNS?"},
+    {"text": "output: Fabricating false evidence is creating fake proof to mislead in BNS."},
+  
+    {"text": "input: What’s the punishment for fabricating false evidence in BNS?"},
+    {"text": "output: Fabricating false evidence gets up to seven years and fine in BNS."},
+  
+    {"text": "input: What’s perjury in BNS?"},
+    {"text": "output: Perjury is giving false evidence in a judicial proceeding in BNS."},
+  
+    {"text": "input: What’s the punishment for perjury in BNS?"},
+    {"text": "output: Perjury carries up to seven years imprisonment and fine in BNS."},
+  
+    {"text": "input: What’s obstructing justice in BNS?"},
+    {"text": "output: Obstructing justice is hindering a legal investigation or trial in BNS."},
+  
+    {"text": "input: What’s the punishment for obstructing justice in BNS?"},
+    {"text": "output: Obstructing justice gets up to one year or fine in BNS."},
+  
+    {"text": "input: What’s harboring an offender in BNS?"},
+    {"text": "output: Harboring an offender is aiding their escape from justice in BNS."},
+  
+    {"text": "input: What’s the punishment for harboring an offender in BNS?"},
+    {"text": "output: Harboring an offender carries up to seven years if serious in BNS."},
+  
+    {"text": "input: What’s public nuisance in BNS?"},
+    {"text": "output: Public nuisance is causing danger or annoyance to the public in BNS."},
+  
+    {"text": "input: What’s the punishment for public nuisance in BNS?"},
+    {"text": "output: Public nuisance carries a fine or community service in BNS."},
+  
+    {"text": "input: What’s adulteration of food in BNS?"},
+    {"text": "output: Adulteration is mixing harmful substances into food or drink in BNS."},
+  
+    {"text": "input: What’s the punishment for adulterating food in BNS?"},
+    {"text": "output: Adulterating food carries up to six months or fine in BNS."},
+  
+    {"text": "input: What’s negligent conduct with poison in BNS?"},
+    {"text": "output: Negligent handling of poison endangering life is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for negligent poison conduct in BNS?"},
+    {"text": "output: Negligent poison conduct gets up to six months or fine in BNS."},
+  
+    {"text": "input: What’s obscene acts in public in BNS?"},
+    {"text": "output: Obscene acts in public to annoy others is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for obscene acts in BNS?"},
+    {"text": "output: Obscene acts carry up to three months or fine in BNS."},
+  
+    {"text": "input: What’s rash driving in BNS?"},
+    {"text": "output: Rash driving endangering human life is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for rash driving in BNS?"},
+    {"text": "output: Rash driving carries up to six months or fine in BNS."},
+  
+    {"text": "input: What’s injuring a place of worship in BNS?"},
+    {"text": "output: Injuring or defiling a place of worship is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for injuring a place of worship in BNS?"},
+    {"text": "output: Injuring a place of worship carries up to two years in BNS."},
+  
+    {"text": "input: What’s outraging religious feelings in BNS?"},
+    {"text": "output: Outraging religious feelings with words or acts is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for outraging religious feelings in BNS?"},
+    {"text": "output: Outraging religious feelings gets up to three years or fine in BNS."},
+  
+    {"text": "input: What’s disturbing a religious assembly in BNS?"},
+    {"text": "output: Disturbing a lawful religious assembly is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for disturbing a religious assembly in BNS?"},
+    {"text": "output: Disturbing a religious assembly carries up to one year or fine in BNS."},
+  
+    {"text": "input: What’s trespassing on burial places in BNS?"},
+    {"text": "output: Trespassing on burial places with intent to offend is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for trespassing on burial places in BNS?"},
+    {"text": "output: Trespassing on burial places gets up to one year or fine in BNS."},
+  
+    {"text": "input: What’s insulting religion in BNS?"},
+    {"text": "output: Insulting religion to wound feelings is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for insulting religion in BNS?"},
+    {"text": "output: Insulting religion carries up to three years or fine in BNS."},
+  
+    {"text": "input: What’s murder in BNS?"},
+    {"text": "output: Murder is intentionally causing death or deadly harm in BNS."},
+  
+    {"text": "input: What’s the punishment for murder in BNS?"},
+    {"text": "output: Murder carries death or life imprisonment with fine in BNS."},
+  
+    {"text": "input: What’s culpable homicide in BNS?"},
+    {"text": "output: Culpable homicide is causing death with intent or knowledge in BNS."},
+  
+    {"text": "input: What’s the punishment for culpable homicide in BNS?"},
+    {"text": "output: Culpable homicide gets up to ten years or life in BNS."},
+  
+    {"text": "input: What’s causing death by negligence in BNS?"},
+    {"text": "output: Causing death by rash or negligent act is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for causing death by negligence in BNS?"},
+    {"text": "output: Causing death by negligence carries up to two years in BNS."},
+  
+    {"text": "input: What’s dowry death in BNS?"},
+    {"text": "output: Dowry death is causing a woman’s death over dowry in BNS."},
+  
+    {"text": "input: What’s the punishment for dowry death in BNS?"},
+    {"text": "output: Dowry death carries seven years minimum or life in BNS."},
+  
+    {"text": "input: What’s abetment of suicide in BNS?"},
+    {"text": "output: Abetting someone to commit suicide is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for abetment of suicide in BNS?"},
+    {"text": "output: Abetment of suicide gets up to ten years and fine in BNS."},
+
+
+    {"text": "input: What’s theft in BNS?"},
+    {"text": "output: Theft is dishonestly taking movable property without consent in BNS."},
+  
+    {"text": "input: What’s the punishment for theft in BNS?"},
+    {"text": "output: Theft carries up to seven years imprisonment and fine in BNS."},
+  
+    {"text": "input: What’s robbery in BNS?"},
+    {"text": "output: Robbery is theft or extortion with violence or threat in BNS."},
+  
+    {"text": "input: What’s the punishment for robbery in BNS?"},
+    {"text": "output: Robbery gets up to ten years, or life if deadly, in BNS."},
+  
+    {"text": "input: What’s dacoity in BNS?"},
+    {"text": "output: Dacoity is robbery by five or more persons together in BNS."},
+  
+    {"text": "input: What’s the punishment for dacoity in BNS?"},
+    {"text": "output: Dacoity carries life imprisonment or seven years in BNS."},
+  
+    {"text": "input: What’s cheating in BNS?"},
+    {"text": "output: Cheating is deceiving someone to deliver property or consent in BNS."},
+  
+    {"text": "input: What’s the punishment for cheating in BNS?"},
+    {"text": "output: Cheating carries up to seven years imprisonment and fine in BNS."},
+  
+    {"text": "input: What’s mischief in BNS?"},
+    {"text": "output: Mischief is intentionally causing damage to property in BNS."},
+  
+    {"text": "input: What’s the punishment for mischief in BNS?"},
+    {"text": "output: Mischief is punishable with up to one year or fine in BNS."},
+  
+    {"text": "input: What’s forgery in BNS?"},
+    {"text": "output: Forgery is making a false document to deceive or injure in BNS."},
+  
+    {"text": "input: What’s the punishment for forgery in BNS?"},
+    {"text": "output: Forgery carries up to two years imprisonment or fine in BNS."},
+  
+    {"text": "input: What’s forgery for cheating in BNS?"},
+    {"text": "output: Forgery for cheating is making a false document to deceive in BNS."},
+  
+    {"text": "input: What’s the punishment for forgery for cheating in BNS?"},
+    {"text": "output: Forgery for cheating gets up to seven years and fine in BNS."},
+  
+    {"text": "input: What’s forging a court record in BNS?"},
+    {"text": "output: Forging a court record or ID is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for forging a court record in BNS?"},
+    {"text": "output: Forging a court record carries up to seven years and fine in BNS."},
+  
+    {"text": "input: What’s counterfeiting a property mark in BNS?"},
+    {"text": "output: Counterfeiting a property mark to deceive is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for counterfeiting a property mark in BNS?"},
+    {"text": "output: Counterfeiting a property mark gets up to two years or fine in BNS."},
+  
+    {"text": "input: What’s falsifying accounts in BNS?"},
+    {"text": "output: Falsifying accounts as a clerk to defraud is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for falsifying accounts in BNS?"},
+    {"text": "output: Falsifying accounts carries up to seven years or fine in BNS."},
+  
+    {"text": "input: What’s criminal intimidation in BNS?"},
+    {"text": "output: Criminal intimidation is threatening injury to alarm or coerce in BNS."},
+  
+    {"text": "input: What’s the punishment for criminal intimidation in BNS?"},
+    {"text": "output: Criminal intimidation carries up to two years or fine in BNS."},
+  
+    {"text": "input: What’s threatening death in BNS?"},
+    {"text": "output: Threatening death or grievous hurt is a severe offence in BNS."},
+  
+    {"text": "input: What’s the punishment for threatening death in BNS?"},
+    {"text": "output: Threatening death gets up to seven years or fine in BNS."},
+  
+    {"text": "input: What’s intentional insult in BNS?"},
+    {"text": "output: Intentional insult is provoking someone to breach peace in BNS."},
+  
+    {"text": "input: What’s the punishment for intentional insult in BNS?"},
+    {"text": "output: Intentional insult carries up to two years or fine in BNS."},
+  
+    {"text": "input: What’s defamation in BNS?"},
+    {"text": "output: Defamation is harming someone’s reputation with words or signs in BNS."},
+  
+    {"text": "input: What’s the punishment for defamation in BNS?"},
+    {"text": "output: Defamation carries up to two years simple imprisonment or fine in BNS."},
+  
+    {"text": "input: What’s public intoxication in BNS?"},
+    {"text": "output: Public intoxication causing annoyance is an offence in BNS."},
+  
+    {"text": "input: What’s the punishment for public intoxication in BNS?"},
+    {"text": "output: Public intoxication gets up to 24 hours or 1,000 rupees in BNS."},
+  
+  
+    {"text": "input: When was the IPC repealed by BNS?"},
+    {"text": "output: The IPC was repealed on December 25, 2023, by BNS."},
+  
+    {"text": "input: Does BNS affect past IPC offences?"},
+    {"text": "output: No, past IPC offences remain unaffected by BNS repeal."},
+  
+    {"text": "input: Can IPC penalties still be enforced under BNS?"},
+    {"text": "output: Yes, IPC penalties can be enforced as if unrepealed in BNS."},
+  
+    {"text": "input: Are IPC rights preserved under BNS?"},
+    {"text": "output: Yes, rights under the IPC are preserved despite repeal in BNS."},
+  
+    {"text": "input: Do IPC investigations continue under BNS?"},
+    {"text": "output: Yes, IPC investigations can continue under BNS provisions."},
+  
+    {"text": "input: Are IPC actions valid under BNS?"},
+    {"text": "output: Yes, actions taken under IPC are valid under BNS."},
+  
+    {"text": "input: What law governs BNS repeal effects?"},
+    {"text": "output: The General Clauses Act, 1897, governs BNS repeal effects."},
+  
+    {"text": "input: Who signed the BNS into law?"},
+    {"text": "output: Diwakar Singh, Joint Secretary, signed BNS into law in 2023."},
+  
+    {"text": "input: When was BNS published?"},
+    {"text": "output: BNS was published on December 25, 2023, in the Gazette of India."} ,
+    {"text": "input: What are the conditions for a Hindu marriage?"},
+    {"text": "output: As per Section 5 of the Hindu Marriage Act, 1955, a marriage is valid if: (i) neither party has a living spouse, (ii) both are of sound mind, (iii) the groom is at least 21 and the bride 18, (iv) they aren’t within prohibited degrees of relationship unless custom allows, and (v) they aren’t sapindas (close relatives) unless permitted by custom."},
+    {"text": "input: What are the grounds for divorce under Hindu law?"},
+    {"text": "output: Under Section 13 of the Hindu Marriage Act, 1955, you can seek divorce for: (i) adultery, (ii) cruelty, (iii) desertion for 2 years, (iv) conversion to another religion, (v) mental disorder, (vi) incurable disease like leprosy, or (vii) if a spouse hasn’t been heard of for 7 years."},
+    {"text": "input: What’s needed for a marriage under the Special Marriage Act?"},
+    {"text": "output: As per Section 4 of the Special Marriage Act, 1954, a marriage is valid if: (i) neither party has a living spouse, (ii) both are mentally sound, (iii) the groom is 21 and bride 18, (iv) they aren’t within prohibited relationships unless law permits, and (v) at least one party has resided in the district for 30 days before notice."},
+    {"text": "input: How can I get a divorce under the Special Marriage Act?"},
+    {"text": "output: Under Section 27 of the Special Marriage Act, 1954, divorce can be filed for: (i) adultery, (ii) cruelty, (iii) desertion for 2 years, (iv) imprisonment of spouse for 7+ years, (v) mental disorder, or (vi) if a spouse hasn’t been heard of for 7 years."},
+    {"text": "input: How can a Muslim man divorce his wife?"},
+    {"text": "output: Under the Muslim Personal Law (Shariat) Application Act, 1937, a man can pronounce talaq (divorce) as per Shariat. After the Muslim Women (Protection of Rights on Divorce) Act, 1986, he must follow triple talaq rules or judicial process, providing maintenance during iddat (3 months post-divorce)."},
+    {"text": "input: How can a Muslim woman seek divorce?"},
+    {"text": "output: Under the Muslim Personal Law (Shariat) Application Act, 1937, a woman can seek khula (divorce by mutual consent) or approach a court under the Dissolution of Muslim Marriages Act, 1939, for grounds like cruelty, non-maintenance for 2 years, or husband’s impotence."},
+    {"text": "input: What cases do family courts handle?"},
+    {"text": "output: As per Section 7 of the Family Courts Act, 1984, family courts have jurisdiction over: (i) marriage disputes (validity, divorce), (ii) maintenance claims, (iii) custody and guardianship of children, (iv) property disputes between spouses, and (v) other family-related matters."}
+
+,
+
+    {"text": "input: Who can claim maintenance after divorce?"},
+    {"text": "output: Under Section 125 of the Bharatiya Nagarik Suraksha Sanhita, 2023 (earlier CrPC), a wife, minor children, or parents unable to support themselves can claim maintenance from a person with sufficient means who neglects or refuses to maintain them."},
+    {"text": "input: How much maintenance can I get?"},
+    {"text": "output: Under Section 125 of BNSS, 2023, the court decides maintenance based on the husband’s income, needs of the claimant, and living standard. There’s no fixed amount—it’s case-specific, but the wife can’t be left destitute."},
+    {"text": "input: Who gets custody of a child after divorce?"},
+    {"text": "output: Under Section 7 of the Guardians and Wards Act, 1890, the court appoints a guardian (usually a parent) based on the child’s welfare. Age matters—below 5, the mother often gets custody unless unfit."},
+    {"text": "input: Can a father become the guardian of his child?"},
+    {"text": "output: Yes, under Section 19 of the Guardians and Wards Act, 1890, a father can be appointed guardian unless he’s unfit or the child’s welfare demands otherwise. Courts prioritize the child’s best interest over parental rights."},
+    {"text": "input: Who inherits property under Hindu law if a man dies?"},
+    {"text": "output: Under Section 8 of the Hindu Succession Act, 1956, if a Hindu man dies without a will, his property goes to Class I heirs first—wife, children, and mother equally. If no Class I, then Class II (father, siblings) or agnates."},
+    {"text": "input: Can a daughter inherit property under Hindu law?"},
+    {"text": "output: Yes, under Section 6 of the Hindu Succession Act, 1956 (amended 2005), a daughter has equal rights as a son in her father’s property, whether ancestral or self-acquired, if he dies after September 9, 2005."},
+    {"text": "input: What can I do if I face domestic violence?"},
+    {"text": "output: Under Section 3 of the Protection of Women from Domestic Violence Act, 2005, you can file a case for physical, emotional, or economic abuse. Section 18 allows courts to issue protection orders to stop the violence."},
+    {"text": "input: Can I get money or shelter under domestic violence laws?"},
+    {"text": "output: Yes, under Section 20 of the Protection of Women from Domestic Violence Act, 2005, you can claim monetary relief for expenses or losses. Section 19 can grant residence orders to stay in the shared home or get alternate housing."}
+  ,
+    {"text": "input: What makes a contract valid?"},
+    {"text": "output: Under Section 10 of the Indian Contract Act, 1872, a contract is valid if it’s made by free consent, competent parties (adults, sane), has a lawful object, and consideration (something in return), and isn’t expressly void by law."},
+    {"text": "input: What happens if someone breaks a contract?"},
+    {"text": "output: Under Section 73 of the Indian Contract Act, 1872, if a contract is breached, the injured party can claim compensation for any loss or damage caused, as long as it’s a natural result of the breach."},
+    {"text": "input: How do I legally sell my property?"},
+    {"text": "output: Under Section 54 of the Transfer of Property Act, 1882, a sale of immovable property worth over ₹100 needs a registered written agreement. You transfer ownership by delivering the property after payment."},
+    {"text": "input: What are the rules for renting out my house?"},
+    {"text": "output: Under Section 105 of the Transfer of Property Act, 1882, a lease is a transfer of the right to use property for a time or forever, in return for rent or other payment. Both landlord and tenant must agree on terms."},
+    {"text": "input: Where can I file a civil lawsuit?"},
+    {"text": "output: Under Section 9 of the Code of Civil Procedure, 1908, you can file a civil suit in a court that has jurisdiction over the area where the dispute happened or where the defendant lives or works."},
+    {"text": "input: Can a court stop something temporarily in a case?"},
+    {"text": "output: Yes, under Section 151 of the Code of Civil Procedure, 1908, courts have inherent powers to issue temporary orders, like injunctions, to prevent injustice or delay until the case is decided."},
+    {"text": "input: Can I force someone to follow a contract?"},
+    {"text": "output: Under Section 10 of the Specific Relief Act, 1963, a court can order specific performance of a contract if it’s clear, fair, and compensation in money isn’t enough—like for unique property sales."},
+    {"text": "input: How do I stop someone from doing something during a lawsuit?"},
+    {"text": "output: Under Section 37 of the Specific Relief Act, 1963, you can ask for a temporary injunction to stop someone from acting (e.g., selling disputed land) until the court decides the case."}
+
+,
+    {"text": "input: How long do I have to file a civil case?"},
+    {"text": "output: Under Section 3 of the Limitation Act, 1963, you must file a civil suit within the time limit set—like 3 years for money disputes or 12 years for property recovery—or the court won’t hear it."},
+    {"text": "input: Can I file a case after the deadline?"},
+    {"text": "output: Yes, under Section 5 of the Limitation Act, 1963, a court can allow a late filing if you show sufficient cause—like illness or fraud that delayed you—but it’s not guaranteed."},
+    {"text": "input: What’s a partnership under law?"},
+    {"text": "output: Under Section 4 of the Indian Partnership Act, 1932, a partnership is an agreement between people to share profits of a business run by all or any one of them acting for all."},
+    {"text": "input: Can I sue someone as a partner if our firm isn’t registered?"},
+    {"text": "output: No, under Section 69 of the Indian Partnership Act, 1932, an unregistered firm or its partners can’t sue others for rights from a contract unless it’s to dissolve the firm or claim up to ₹100."},
+    {"text": "input: What’s a legal sale of goods?"},
+    {"text": "output: Under Section 4 of the Sale of Goods Act, 1930, a sale is a contract where the seller transfers ownership of goods to the buyer for a price, either immediately or in the future."},
+    {"text": "input: What if someone doesn’t deliver goods I paid for?"},
+    {"text": "output: Under Section 55 of the Sale of Goods Act, 1930, if the seller fails to deliver paid-for goods, you can sue for damages equal to the loss—like the cost to buy them elsewhere."},
+    {"text": "input: How do I settle a dispute without court?"},
+    {"text": "output: Under Section 7 of the Arbitration and Conciliation Act, 1996, you can use arbitration if you and the other party have a written agreement to let an arbitrator decide your dispute instead of a court."},
+    {"text": "input: Can I challenge an arbitration decision?"},
+    {"text": "output: Yes, under Section 34 of the Arbitration and Conciliation Act, 1996, you can ask a court to set aside an arbitration award if it’s unfair, against public policy, or the arbitrator was biased—but only on limited grounds."}
+,
+
+    {"text": "input: What rights do I have as a consumer?"},
+    {"text": "output: Under Section 10 of the Consumer Protection Act, 2019, you have the right to safe goods, full info about products, choice, complaint against defects, and consumer education."},
+    {"text": "input: What if I get a defective product?"},
+    {"text": "output: Under Section 39 of the Consumer Protection Act, 2019, you can file a complaint with a Consumer Commission. The seller could face fines or jail up to 2 years for defective goods or unfair practices."},
+    {"text": "input: What’s the punishment for giving or taking dowry?"},
+    {"text": "output: Under Section 3 of the Dowry Prohibition Act, 1961, giving or taking dowry is punishable with jail of at least 5 years and a fine of ₹15,000 or the dowry value, whichever is more."},
+    {"text": "input: What if someone demands dowry from me?"},
+    {"text": "output: Under Section 4 of the Dowry Prohibition Act, 1961, demanding dowry is illegal and can lead to jail up to 2 years and a fine up to ₹10,000."},
+    {"text": "input: What’s the penalty for rash driving?"},
+    {"text": "output: Under Section 184 of the Motor Vehicles Act, 1988, rash or dangerous driving can get you up to 6 months in jail, a ₹1,000 fine, or both for the first offense—harsher if repeated."},
+    {"text": "input: Can I avoid court for a traffic fine?"},
+    {"text": "output: Yes, under Section 200 of the Motor Vehicles Act, 1988, minor offenses like speeding can be settled by paying a fine on the spot or later, as decided by the state government."},
+    {"text": "input: What happens if someone hacks my account?"},
+    {"text": "output: Under Section 66 of the Information Technology Act, 2000, hacking or damaging a computer system can lead to up to 3 years in jail or a fine up to ₹5 lakh, or both."},
+    {"text": "input: What’s the punishment for posting obscene stuff online?"},
+    {"text": "output: Under Section 67 of the Information Technology Act, 2000, sharing obscene material online can get you up to 3 years in jail and a fine up to ₹5 lakh for the first offense—harsher if repeated."}
+ ,
+    {"text": "input: What happens if a cheque bounces?"},
+    {"text": "output: Under Section 138 of the Negotiable Instruments Act, 1881, if a cheque bounces due to insufficient funds, the issuer can face up to 2 years in jail, a fine double the cheque amount, or both, if you file a case within 30 days of notice."},
+
+    {"text": "input: Can a company be punished for a bounced cheque?"},
+    {"text": "output: Yes, under Section 141 of the Negotiable Instruments Act, 1881, if a company’s cheque bounces, the company and its responsible officers (like directors) can be liable unless they prove they weren’t involved."},
+    {"text": "input: What’s the punishment for sexually assaulting a child?"},
+
+    {"text": "output: Under Section 4 of the POCSO Act, 2012, penetrative sexual assault on a child under 16 gets at least 20 years in jail (up to life) and a fine—no bail for the first 6 months."},
+    {"text": "input: What if someone harasses a child sexually?"},
+
+    {"text": "output: Under Section 12 of the POCSO Act, 2012, sexual harassment of a child—like lewd comments or gestures—can lead to up to 3 years in jail and a fine."},
+    {"text": "input: What happens if a minor commits a crime?"},
+
+    {"text": "output: Under Section 21 of the Juvenile Justice Act, 2015, a child aged 16-18 committing a heinous offense (like murder) can be tried as an adult after assessment, facing jail up to 7 years; under 16, they go to a juvenile home."},
+
+    {"text": "input: Can a child’s name be published in a case?"},
+    {"text": "output: No, under Section 74 of the Juvenile Justice Act, 2015, revealing a child’s identity (name, address, photo) in conflict with law or needing protection is illegal—up to 6 months jail or ₹2 lakh fine."},
+    {"text": "input: How can I get info from the government?"},
+
+    {"text": "output: Under Section 4 of the Right to Information Act, 2005, you can file an RTI application with a public authority, paying ₹10, and they must reply within 30 days with the info or explain why not."},
+    {"text": "input: What if a government officer denies my RTI request?"},
+    
+    {"text": "output: Under Section 20 of the Right to Information Act, 2005, if an officer denies info without reason, they can face a fine up to ₹25,000 or disciplinary action—you can appeal to a higher authority."}
+]
+
+ 
+
+  
